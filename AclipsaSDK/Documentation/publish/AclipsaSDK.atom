@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:docset="http://developer.apple.com/rss/docset_extensions" xml:lang="en">
+    <id>http://saas.aclipsa.com/AclipsaSDK.atom/20150305113952</id>
+    <title type="text">AclipsaSDK Documentation</title>
+    <rights>Copyright © 2015 Aclipsa. All rights reserved.</rights>
+    <link rel="self" href="http://saas.aclipsa.com/AclipsaSDK.atom"></link>
+    <docset:publisherName>Aclipsa</docset:publisherName>
+    <docset:publisherID>com.aclipsa.documentation</docset:publisherID>
+    <updated>2015-03-05T11:39:52-07:00</updated>
+    <entry>
+        <id>tag:saas.aclipsa.com,2015-03-05:com.aclipsa.AclipsaSDK/1.0.1</id>
+        <title type="text">AclipsaSDK Documentation</title>
+        <updated>2015-03-05T11:39:52-07:00</updated>
+        <content type="text">AclipsaSDK Documentation (v1.0.1)</content>
+        <link rel="enclosure" type="application/octet-stream" href="http:/saas.aclipsa.com/com.aclipsa.AclipsaSDK-1.0.1.xar" length="376595"></link>
+        <docset:identifier>com.aclipsa.AclipsaSDK</docset:identifier>
+        <docset:version>1.0.1</docset:version>
+        <docset:minimumXcodeVersion>3.0.0</docset:minimumXcodeVersion>
+    </entry>
+</feed>

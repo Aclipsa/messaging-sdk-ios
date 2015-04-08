@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UIImage+ACLIPAdditions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UIImage(ACLIPAdditions)</TokenIdentifier>
+			<Abstract type="html">Defines extensions to UIImage that adds thumbnail generation</Abstract>
+			<DeclaredIn>UIImage+ACLIPAdditions.h</DeclaredIn>
+            
+			
+			<NodeRef refid="11"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIImage/getThumbnailFromURL:size:</TokenIdentifier>
+			<Abstract type="html">Returns an image that is a thumbnail of the given image.</Abstract>
+			<DeclaredIn>UIImage+ACLIPAdditions.h</DeclaredIn>
+			
+			<Declaration>+ (UIImage *)getThumbnailFromURL:(NSURL *)url size:(CGSize)size</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>url</Name>
+					<Abstract type="html">The location of the image to generate a thumbnail of.</Abstract>
+				</Parameter><Parameter>
+					<Name>size</Name>
+					<Abstract type="html">The size that the generated thumbnail will be.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A NSImage that contains a thumbnail of the image at url that is size.</Abstract></ReturnValue>
+			<Anchor>//api/name/getThumbnailFromURL:size:</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIImage/getThumbnailFromImage:size:</TokenIdentifier>
+			<Abstract type="html">Returns an image that is a thumbnail of the given image.</Abstract>
+			<DeclaredIn>UIImage+ACLIPAdditions.h</DeclaredIn>
+			
+			<Declaration>+ (UIImage *)getThumbnailFromImage:(UIImage *)image size:(CGSize)size</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>image</Name>
+					<Abstract type="html">The image to generate a thumbnail of.</Abstract>
+				</Parameter><Parameter>
+					<Name>size</Name>
+					<Abstract type="html">The size that the generated thumbnail will be.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A NSImage that contains a thumbnail of the image that is size.</Abstract></ReturnValue>
+			<Anchor>//api/name/getThumbnailFromImage:size:</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

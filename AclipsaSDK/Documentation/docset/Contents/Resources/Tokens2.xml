@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/ACLIPMessage.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/ACLIPMessage</TokenIdentifier>
+			<Abstract type="html">An ACLIPMessage encapulates the data of a message.</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+            
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/setGuid:</TokenIdentifier>
+			<Abstract type="html">Unique identifier for the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *guid</Declaration>
+			
+			
+			<Anchor>//api/name/guid</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/guid</TokenIdentifier>
+			<Abstract type="html">Unique identifier for the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *guid</Declaration>
+			
+			
+			<Anchor>//api/name/guid</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPMessage/guid</TokenIdentifier>
+			<Abstract type="html">Unique identifier for the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *guid</Declaration>
+			
+			
+			<Anchor>//api/name/guid</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/setTitle:</TokenIdentifier>
+			<Abstract type="html">The title of the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/title</TokenIdentifier>
+			<Abstract type="html">The title of the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPMessage/title</TokenIdentifier>
+			<Abstract type="html">The title of the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/setMessageText:</TokenIdentifier>
+			<Abstract type="html">The messageText of the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *messageText</Declaration>
+			
+			
+			<Anchor>//api/name/messageText</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/messageText</TokenIdentifier>
+			<Abstract type="html">The messageText of the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *messageText</Declaration>
+			
+			
+			<Anchor>//api/name/messageText</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPMessage/messageText</TokenIdentifier>
+			<Abstract type="html">The messageText of the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *messageText</Declaration>
+			
+			
+			<Anchor>//api/name/messageText</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/setSender:</TokenIdentifier>
+			<Abstract type="html">The user who sent the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPUser *sender</Declaration>
+			
+			
+			<Anchor>//api/name/sender</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/sender</TokenIdentifier>
+			<Abstract type="html">The user who sent the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPUser *sender</Declaration>
+			
+			
+			<Anchor>//api/name/sender</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPMessage/sender</TokenIdentifier>
+			<Abstract type="html">The user who sent the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPUser *sender</Declaration>
+			
+			
+			<Anchor>//api/name/sender</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/setRecipients:</TokenIdentifier>
+			<Abstract type="html">The recipients of the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSSet *recipients</Declaration>
+			
+			
+			<Anchor>//api/name/recipients</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/recipients</TokenIdentifier>
+			<Abstract type="html">The recipients of the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSSet *recipients</Declaration>
+			
+			
+			<Anchor>//api/name/recipients</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPMessage/recipients</TokenIdentifier>
+			<Abstract type="html">The recipients of the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSSet *recipients</Declaration>
+			
+			
+			<Anchor>//api/name/recipients</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/setStatuses:</TokenIdentifier>
+			<Abstract type="html">The statuses for the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSSet *statuses</Declaration>
+			
+			
+			<Anchor>//api/name/statuses</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/statuses</TokenIdentifier>
+			<Abstract type="html">The statuses for the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSSet *statuses</Declaration>
+			
+			
+			<Anchor>//api/name/statuses</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPMessage/statuses</TokenIdentifier>
+			<Abstract type="html">The statuses for the message</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSSet *statuses</Declaration>
+			
+			
+			<Anchor>//api/name/statuses</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/setVideo:</TokenIdentifier>
+			<Abstract type="html">The message&apos;s video</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPVideo *video</Declaration>
+			
+			
+			<Anchor>//api/name/video</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/video</TokenIdentifier>
+			<Abstract type="html">The message&apos;s video</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPVideo *video</Declaration>
+			
+			
+			<Anchor>//api/name/video</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPMessage/video</TokenIdentifier>
+			<Abstract type="html">The message&apos;s video</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPVideo *video</Declaration>
+			
+			
+			<Anchor>//api/name/video</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/setCreatedDate:</TokenIdentifier>
+			<Abstract type="html">The date the video was sent</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSDate *createdDate</Declaration>
+			
+			
+			<Anchor>//api/name/createdDate</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/createdDate</TokenIdentifier>
+			<Abstract type="html">The date the video was sent</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSDate *createdDate</Declaration>
+			
+			
+			<Anchor>//api/name/createdDate</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPMessage/createdDate</TokenIdentifier>
+			<Abstract type="html">The date the video was sent</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSDate *createdDate</Declaration>
+			
+			
+			<Anchor>//api/name/createdDate</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/setMessageThread:</TokenIdentifier>
+			<Abstract type="html">The message thread that the message belongs to</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPMessageThread *messageThread</Declaration>
+			
+			
+			<Anchor>//api/name/messageThread</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/messageThread</TokenIdentifier>
+			<Abstract type="html">The message thread that the message belongs to</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPMessageThread *messageThread</Declaration>
+			
+			
+			<Anchor>//api/name/messageThread</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPMessage/messageThread</TokenIdentifier>
+			<Abstract type="html">The message thread that the message belongs to</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPMessageThread *messageThread</Declaration>
+			
+			
+			<Anchor>//api/name/messageThread</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/setRead:</TokenIdentifier>
+			<Abstract type="html">Has the message been read by the current user.</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=isRead) BOOL read</Declaration>
+			
+			
+			<Anchor>//api/name/read</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/isRead</TokenIdentifier>
+			<Abstract type="html">Has the message been read by the current user.</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=isRead) BOOL read</Declaration>
+			
+			
+			<Anchor>//api/name/read</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPMessage/read</TokenIdentifier>
+			<Abstract type="html">Has the message been read by the current user.</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=isRead) BOOL read</Declaration>
+			
+			
+			<Anchor>//api/name/read</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/setYanked:</TokenIdentifier>
+			<Abstract type="html">Has the message been yanked by the sender.</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=isYanked) BOOL yanked</Declaration>
+			
+			
+			<Anchor>//api/name/yanked</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/isYanked</TokenIdentifier>
+			<Abstract type="html">Has the message been yanked by the sender.</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=isYanked) BOOL yanked</Declaration>
+			
+			
+			<Anchor>//api/name/yanked</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPMessage/yanked</TokenIdentifier>
+			<Abstract type="html">Has the message been yanked by the sender.</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=isYanked) BOOL yanked</Declaration>
+			
+			
+			<Anchor>//api/name/yanked</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ACLIPMessage/messageForGUID:</TokenIdentifier>
+			<Abstract type="html">Returns a message for the guid</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>+ (ACLIPMessage *)messageForGUID:(NSString *)guid</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>guid</Name>
+					<Abstract type="html">An NSString of message guid.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An ACLIPMessage object</Abstract></ReturnValue>
+			<Anchor>//api/name/messageForGUID:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ACLIPMessage/messagesForGUIDs:</TokenIdentifier>
+			<Abstract type="html">Returns messages for the guids</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)messagesForGUIDs:(NSArray *)guids</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>guids</Name>
+					<Abstract type="html">An NSArray of message guids.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An NSArray of ACLIPMessage objects</Abstract></ReturnValue>
+			<Anchor>//api/name/messagesForGUIDs:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/deleteMessageCompleteBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Deletes the message.</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>- (void)deleteMessageCompleteBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully loading the messages list. The completeBlock may be called more then once if cached results exist.  completedBlock can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/deleteMessageCompleteBlock:errorBlock:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/markMessageReadCompleteBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Marks the message as being read by the user.</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>- (void)markMessageReadCompleteBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully marking the message read.  completedBlock can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/markMessageReadCompleteBlock:errorBlock:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/markMessageUnreadCompleteBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Marks the message as unread by the user.</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>- (void)markMessageUnreadCompleteBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully marking the message unread.  completedBlock can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/markMessageUnreadCompleteBlock:errorBlock:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/yankMessageForRecipients:completeBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Removes the message from being able to be seen by the recipients.</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>- (void)yankMessageForRecipients:(NSArray *)recipients completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>recipients</Name>
+					<Abstract type="html">An array of recipient user IDs.  The array must contain at least one user ID.</Abstract>
+				</Parameter><Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully loading the messages list. The completeBlock may be called more then once if cached results exist.  completedBlock can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/yankMessageForRecipients:completeBlock:errorBlock:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessage/unyankMessageForRecipients:completeBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Allows the message to be seen by the recipients again.</Abstract>
+			<DeclaredIn>ACLIPMessage.h</DeclaredIn>
+			
+			<Declaration>- (void)unyankMessageForRecipients:(NSArray *)recipients completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>recipients</Name>
+					<Abstract type="html">An array of recipient user IDs.  The array must contain at least one user ID.</Abstract>
+				</Parameter><Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully loading the messages list. The completeBlock may be called more then once if cached results exist.  completedBlock can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/unyankMessageForRecipients:completeBlock:errorBlock:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

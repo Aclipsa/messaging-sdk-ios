@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>ACLIPSession Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">AclipsaSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Aclipsa</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/appID">appID</option>
+		
+		<option value="//api/name/serverEnvironment">serverEnvironment</option>
+		
+		<option value="//api/name/userID">userID</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/activeSession">+ activeSession</option>
+		
+		<option value="//api/name/createSessionWithAppID:serverEnvironment:">+ createSessionWithAppID:serverEnvironment:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/canEncodeVideos">- canEncodeVideos</option>
+		
+		<option value="//api/name/deleteMessages:completeBlock:errorBlock:">- deleteMessages:completeBlock:errorBlock:</option>
+		
+		<option value="//api/name/deleteUserWithID:completionBlock:errorBlock:">- deleteUserWithID:completionBlock:errorBlock:</option>
+		
+		<option value="//api/name/forwardMessage:messageText:recipients:video:oldMessageGuid:newMessageGuid:completeBlock:errorBlock:">- forwardMessage:messageText:recipients:video:oldMessageGuid:newMessageGuid:completeBlock:errorBlock:</option>
+		
+		<option value="//api/name/loadMessageWithGUID:completeBlock:errorBlock:">- loadMessageWithGUID:completeBlock:errorBlock:</option>
+		
+		<option value="//api/name/loadUserVideoWithID:completionBlock:errorBlock:">- loadUserVideoWithID:completionBlock:errorBlock:</option>
+		
+		<option value="//api/name/loadUserVideosWithCompletionBlock:errorBlock:">- loadUserVideosWithCompletionBlock:errorBlock:</option>
+		
+		<option value="//api/name/loadUserVideosWithFilter:completionBlock:errorBlock:">- loadUserVideosWithFilter:completionBlock:errorBlock:</option>
+		
+		<option value="//api/name/loginWithUserID:completionBlock:errorBlock:">- loginWithUserID:completionBlock:errorBlock:</option>
+		
+		<option value="//api/name/logoutWithCompletionBlock:errorBlock:">- logoutWithCompletionBlock:errorBlock:</option>
+		
+		<option value="//api/name/registerAPNSToken:">- registerAPNSToken:</option>
+		
+		<option value="//api/name/registerMessageLoadingCompletionBlock:errorBlock:">- registerMessageLoadingCompletionBlock:errorBlock:</option>
+		
+		<option value="//api/name/sendMessage:messageText:recipients:videoURL:completeBlock:errorBlock:">- sendMessage:messageText:recipients:videoURL:completeBlock:errorBlock:</option>
+		
+		<option value="//api/name/sendMessage:messageText:recipients:videoURL:messageGuid:completeBlock:errorBlock:">- sendMessage:messageText:recipients:videoURL:messageGuid:completeBlock:errorBlock:</option>
+		
+		<option value="//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:completeBlock:errorBlock:">- sendMessage:messageText:recipients:videoURL:skipEncoding:completeBlock:errorBlock:</option>
+		
+		<option value="//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:completeBlock:errorBlock:">- sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:completeBlock:errorBlock:</option>
+		
+		<option value="//api/name/unregisterMessageLoading">- unregisterMessageLoading</option>
+		
+		<option value="//api/name/uploadVideoAtURL:title:attributes:completeBlock:errorBlock:">- uploadVideoAtURL:title:attributes:completeBlock:errorBlock:</option>
+		
+		<option value="//api/name/uploadVideoAtURL:title:attributes:skipEncoding:completeBlock:errorBlock:">- uploadVideoAtURL:title:attributes:skipEncoding:completeBlock:errorBlock:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">ACLIPSession Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>ACLIPSession.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>An ACLIPSession encapsulates the communication session between the client application and the Aclipsa server.  A session MUST be created before any other calls to the AclipsaSDK can occur.  n ACLIPInvalidSessionExecption will be thrown if a session has not been created.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/appID" title="appID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/appID">&nbsp;&nbsp;appID</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The appID of the active session</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *appID</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The appID of the active session</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/userID" title="userID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/userID">&nbsp;&nbsp;userID</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The userID currently logged into the active session</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *userID</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The userID currently logged into the active session</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/serverEnvironment" title="serverEnvironment"></a>
+	<h3 class="method-title"><code><a href="#//api/name/serverEnvironment">&nbsp;&nbsp;serverEnvironment</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The flag indicating which server should be used.  Defaults to ACLIPDevelopmentServer</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) ACLIPServerEnvironment serverEnvironment</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The flag indicating which server should be used.  Defaults to ACLIPDevelopmentServer</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createSessionWithAppID:serverEnvironment:" title="createSessionWithAppID:serverEnvironment:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createSessionWithAppID:serverEnvironment:">+&nbsp;createSessionWithAppID:serverEnvironment:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An appication may get or set the current active session.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (ACLIPSession *)createSessionWithAppID:(NSString *)<em>appID</em> serverEnvironment:(ACLIPServerEnvironment)<em>serverType</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>appID</code></th>
+						<td><p>The id string for the app provided by the AclipsaSDK admin site.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serverType</code></th>
+						<td><p>An <a href="../Constants/ACLIPServerEnvironment.html">ACLIPServerEnvironment</a> value for which server environment should be used.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An active ACLIPSession for the <a href="#//api/name/appID">appID</a>.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>An appication may get or set the current active session.</p>
+
+<p>Only one ACLIPSession can be created.  Calling createSessionWithAppID: more than once will result in the same object being returned that is initialized to the <a href="#//api/name/appID">appID</a> used in the first call to it.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/activeSession" title="activeSession"></a>
+	<h3 class="method-title"><code><a href="#//api/name/activeSession">+&nbsp;activeSession</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An appication may get or set the current active session.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (ACLIPSession *)activeSession</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>An appication may get or set the current active session.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> An ACLIPInvalidSessionExecption will be thrown if a session has not been created first.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loginWithUserID:completionBlock:errorBlock:" title="loginWithUserID:completionBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loginWithUserID:completionBlock:errorBlock:">&ndash;&nbsp;loginWithUserID:completionBlock:errorBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Logs the user with <a href="#//api/name/userID">userID</a> in as the user for the session</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loginWithUserID:(NSString *)<em>userID</em> completionBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userID</code></th>
+						<td><p>The id string for the user to be logged in.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completedBlock</code></th>
+						<td><p>A block that gets called upon successfully logging in.  completedBlock can be nil if no post login action is required.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorBlock</code></th>
+						<td><p>A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Logs the user with <a href="#//api/name/userID">userID</a> in as the user for the session</p>
+
+<p>The call is asyncronous and either the completedBlock or the errorBlock will be called upon the network connection terminating.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logoutWithCompletionBlock:errorBlock:" title="logoutWithCompletionBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logoutWithCompletionBlock:errorBlock:">&ndash;&nbsp;logoutWithCompletionBlock:errorBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Logs the user out for the session</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)logoutWithCompletionBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completedBlock</code></th>
+						<td><p>A block that gets called upon successfully logging out.  completedBlock can be nil if no post login action is required.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorBlock</code></th>
+						<td><p>A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Logs the user out for the session</p>
+
+<p>The call is asyncronous and either the completedBlock or the errorBlock will be called upon the network connection terminating. Any method that requires a user to be logged in will fail after completion until <a href="#//api/name/loginWithUserID:completionBlock:errorBlock:">loginWithUserID:completionBlock:errorBlock:</a> is called again.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteUserWithID:completionBlock:errorBlock:" title="deleteUserWithID:completionBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteUserWithID:completionBlock:errorBlock:">&ndash;&nbsp;deleteUserWithID:completionBlock:errorBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Deletes the user associated with the session</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteUserWithID:(NSString *)<em>userID</em> completionBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userID</code></th>
+						<td><p>The id string for the user to be deleted.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completedBlock</code></th>
+						<td><p>A block that gets called upon successfully deleting the user.  completedBlock can be nil if no post deletion action is required.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorBlock</code></th>
+						<td><p>A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Deletes the user associated with the session</p>
+
+<p>The call is asyncronous and either the completedBlock or the errorBlock will be called upon the network connection terminating. Any method that requires a user to be logged in will fail after completion until deleteUserWithUserID:completionBlock:errorBlock: is called again.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/uploadVideoAtURL:title:attributes:completeBlock:errorBlock:" title="uploadVideoAtURL:title:attributes:completeBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/uploadVideoAtURL:title:attributes:completeBlock:errorBlock:">&ndash;&nbsp;uploadVideoAtURL:title:attributes:completeBlock:errorBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Uploads the video file at videoURL.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (ACLIPVideo *)uploadVideoAtURL:(NSURL *)<em>videoURL</em> title:(NSString *)<em>title</em> attributes:(NSDictionary *)<em>attributes</em> completeBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>videoURL</code></th>
+						<td><p>A URL that points to the video to be uploaded. Can not be nil.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>title</code></th>
+						<td><p>A title for the video.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>attributes</code></th>
+						<td><p>The attributes of the video. All values must be of types suppored by NSJSONSerialization.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completedBlock</code></th>
+						<td><p>A block that gets called upon successfully uploading the video.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorBlock</code></th>
+						<td><p>A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new video object that represents the video being uploaded.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Uploads the video file at videoURL.</p>
+
+<p>The complete block gets called once the video has been successfully transmitted to the Aclipsa Servers and the <a href="../Classes/ACLIPVideo.html">ACLIPVideo</a> object is put into the ACLIPVideoProcessingState state.  <em>Note:</em> The video is not available for playback until the state changes to ACLIPVideoCompletedState from ACLIPVideoProcessingState.</p>
+
+<p>The upload call happens asyncronously.  The caller should expect the complete and error blocks to happen at an indeterminate time in the future to properly handle the error and only post successful action that it need to perform.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/uploadVideoAtURL:title:attributes:skipEncoding:completeBlock:errorBlock:" title="uploadVideoAtURL:title:attributes:skipEncoding:completeBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/uploadVideoAtURL:title:attributes:skipEncoding:completeBlock:errorBlock:">&ndash;&nbsp;uploadVideoAtURL:title:attributes:skipEncoding:completeBlock:errorBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Uploads the video file at videoURL.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (ACLIPVideo *)uploadVideoAtURL:(NSURL *)<em>videoURL</em> title:(NSString *)<em>title</em> attributes:(NSDictionary *)<em>attributes</em> skipEncoding:(BOOL)<em>skipEncoding</em> completeBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>videoURL</code></th>
+						<td><p>A URL that points to the video to be uploaded. Can not be nil.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>title</code></th>
+						<td><p>A title for the video.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>attributes</code></th>
+						<td><p>The attributes of the video. All values must be of types suppored by NSJSONSerialization.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>skipEncoding</code></th>
+						<td><p>BOOL to bypass Elemental encoding and encryption.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completedBlock</code></th>
+						<td><p>A block that gets called upon successfully uploading the video.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorBlock</code></th>
+						<td><p>A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new video object that represents the video being uploaded.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Uploads the video file at videoURL.</p>
+
+<p>The complete block gets called once the video has been successfully transmitted to the Aclipsa Servers and the <a href="../Classes/ACLIPVideo.html">ACLIPVideo</a> object is put into the ACLIPVideoProcessingState state.  <em>Note:</em> The video is not available for playback until the state changes to ACLIPVideoCompletedState from ACLIPVideoProcessingState.</p>
+
+<p>The upload call happens asyncronously.  The caller should expect the complete and error blocks to happen at an indeterminate time in the future to properly handle the error and only post successful action that it need to perform.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadUserVideoWithID:completionBlock:errorBlock:" title="loadUserVideoWithID:completionBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadUserVideoWithID:completionBlock:errorBlock:">&ndash;&nbsp;loadUserVideoWithID:completionBlock:errorBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Loads the video for the given videoID.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loadUserVideoWithID:(NSString *)<em>videoID</em> completionBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>videoID</code></th>
+						<td><p>The ID of the video to load.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completedBlock</code></th>
+						<td><p>A block that gets called upon successfully loading the video. The completedBlock parameter will be the <a href="../Classes/ACLIPVideo.html">ACLIPVideo</a> for the videoID.  completedBlock can be nil.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorBlock</code></th>
+						<td><p>A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Loads the video for the given videoID.</p>
+
+<p>The call is asyncronous and either the completedBlock or the errorBlock will be called upon the network connection terminating. The video will be returned as an <a href="../Classes/ACLIPVideo.html">ACLIPVideo</a> in the completedBlock&rsquo;s parameter.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadUserVideosWithCompletionBlock:errorBlock:" title="loadUserVideosWithCompletionBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadUserVideosWithCompletionBlock:errorBlock:">&ndash;&nbsp;loadUserVideosWithCompletionBlock:errorBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Loads the videos for the logged in user.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loadUserVideosWithCompletionBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completedBlock</code></th>
+						<td><p>A block that gets called upon successfully loading the video list. The completeBlock may be called more then once if cached results exist.  completedBlock can be nil.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorBlock</code></th>
+						<td><p>A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Loads the videos for the logged in user.</p>
+
+<p>The call is asyncronous and either the completedBlock or the errorBlock will be called upon the network connection terminating. The videos will be returned as an NSArray in the completedBlock&rsquo;s parameter.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadUserVideosWithFilter:completionBlock:errorBlock:" title="loadUserVideosWithFilter:completionBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadUserVideosWithFilter:completionBlock:errorBlock:">&ndash;&nbsp;loadUserVideosWithFilter:completionBlock:errorBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Loads the videos for the logged in user.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loadUserVideosWithFilter:(NSPredicate *)<em>predicate</em> completionBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>predicate</code></th>
+						<td><p>An NSPredicate that will filter the results based the video&rsquo;s custom attributes. Currently only is equal (==) operators are supported.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completedBlock</code></th>
+						<td><p>A block that gets called upon successfully loading the video list. The completeBlock may be called more then once if cached results exist.  completedBlock can be nil.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorBlock</code></th>
+						<td><p>A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Loads the videos for the logged in user.</p>
+
+<p>The call is asyncronous and either the completedBlock or the errorBlock will be called upon the network connection terminating. The videos will be returned as an NSArray in the completedBlock&rsquo;s parameter.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadMessageWithGUID:completeBlock:errorBlock:" title="loadMessageWithGUID:completeBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadMessageWithGUID:completeBlock:errorBlock:">&ndash;&nbsp;loadMessageWithGUID:completeBlock:errorBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Loads the message for the given guid.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loadMessageWithGUID:(NSString *)<em>guid</em> completeBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>guid</code></th>
+						<td><p>The ID of the message to load.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completedBlock</code></th>
+						<td><p>A block that gets called upon successfully loading the video. The completedBlock parameter will be the <a href="../Classes/ACLIPMessage.html">ACLIPMessage</a> for the guid.  completedBlock can be nil.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorBlock</code></th>
+						<td><p>A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Loads the message for the given guid.</p>
+
+<p>The call is asyncronous and either the completedBlock or the errorBlock will be called upon the network connection terminating. The message will be returned as an <a href="../Classes/ACLIPMessage.html">ACLIPMessage</a> in the completedBlock&rsquo;s parameter.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerMessageLoadingCompletionBlock:errorBlock:" title="registerMessageLoadingCompletionBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerMessageLoadingCompletionBlock:errorBlock:">&ndash;&nbsp;registerMessageLoadingCompletionBlock:errorBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Registers the completion and error blocks for message loading.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)registerMessageLoadingCompletionBlock:(ACLIPMessageLoadCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completedBlock</code></th>
+						<td><p>A block that gets called upon successfully loading the messages list. The first NSArray paramater will return a list of all messages for the user. The second will contain an array of <a href="../Classes/ACLIPMessageThread.html">ACLIPMessageThread</a> objects.  The completeBlock may be called more then once if cached results exist.  completedBlock can be nil.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorBlock</code></th>
+						<td><p>A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Registers the completion and error blocks for message loading.</p>
+
+<p>The call registers a completion and error block for loading messages.  The completion block will be called when ever messages are available.  Multiple calls will replace the previous blocks with the new blocks.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/unregisterMessageLoading" title="unregisterMessageLoading"></a>
+	<h3 class="method-title"><code><a href="#//api/name/unregisterMessageLoading">&ndash;&nbsp;unregisterMessageLoading</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Unregisters the completion and error blocks that were registered in <a href="#//api/name/registerMessageLoadingCompletionBlock:errorBlock:">registerMessageLoadingCompletionBlock:errorBlock:</a>. The blocks will not be called again.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)unregisterMessageLoading</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Unregisters the completion and error blocks that were registered in <a href="#//api/name/registerMessageLoadingCompletionBlock:errorBlock:">registerMessageLoadingCompletionBlock:errorBlock:</a>. The blocks will not be called again.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sendMessage:messageText:recipients:videoURL:completeBlock:errorBlock:" title="sendMessage:messageText:recipients:videoURL:completeBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendMessage:messageText:recipients:videoURL:completeBlock:errorBlock:">&ndash;&nbsp;sendMessage:messageText:recipients:videoURL:completeBlock:errorBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sends a message to recipients</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (ACLIPMessage *)sendMessage:(NSString *)<em>title</em> messageText:(NSString *)<em>messageText</em> recipients:(NSArray *)<em>recipients</em> videoURL:(NSURL *)<em>videoURL</em> completeBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>title</code></th>
+						<td><p>An optional title for the message.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>messageText</code></th>
+						<td><p>An optional text message that can be included in the message</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>recipients</code></th>
+						<td><p>An array of recipient user IDs.  The array must contain at least one user ID.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>videoURL</code></th>
+						<td><p>An optional URL that points to the video to be uploaded.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completedBlock</code></th>
+						<td><p>A block that gets called upon successfully sending the message.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorBlock</code></th>
+						<td><p>A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new message object that represents the message being sent.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Sends a message to recipients</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sendMessage:messageText:recipients:videoURL:messageGuid:completeBlock:errorBlock:" title="sendMessage:messageText:recipients:videoURL:messageGuid:completeBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendMessage:messageText:recipients:videoURL:messageGuid:completeBlock:errorBlock:">&ndash;&nbsp;sendMessage:messageText:recipients:videoURL:messageGuid:completeBlock:errorBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sends a message to recipients while providing your own message guid</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (ACLIPMessage *)sendMessage:(NSString *)<em>title</em> messageText:(NSString *)<em>messageText</em> recipients:(NSArray *)<em>recipients</em> videoURL:(NSURL *)<em>videoURL</em> messageGuid:(NSString *)<em>messageGuid</em> completeBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>title</code></th>
+						<td><p>An optional title for the message.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>messageText</code></th>
+						<td><p>An optional text message that can be included in the message</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>recipients</code></th>
+						<td><p>An array of recipient user IDs.  The array must contain at least one user ID.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>videoURL</code></th>
+						<td><p>An optional URL that points to the video to be uploaded.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>messageGuid</code></th>
+						<td><p>An optional message GUID to use for the message.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completedBlock</code></th>
+						<td><p>A block that gets called upon successfully sending the message.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorBlock</code></th>
+						<td><p>A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new message object that represents the message being sent.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Sends a message to recipients while providing your own message guid</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:completeBlock:errorBlock:" title="sendMessage:messageText:recipients:videoURL:skipEncoding:completeBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:completeBlock:errorBlock:">&ndash;&nbsp;sendMessage:messageText:recipients:videoURL:skipEncoding:completeBlock:errorBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sends a message to recipients with the option to skip encoding the video</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (ACLIPMessage *)sendMessage:(NSString *)<em>title</em> messageText:(NSString *)<em>messageText</em> recipients:(NSArray *)<em>recipients</em> videoURL:(NSURL *)<em>videoURL</em> skipEncoding:(BOOL)<em>skipEncoding</em> completeBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>title</code></th>
+						<td><p>An optional title for the message.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>messageText</code></th>
+						<td><p>An optional text message that can be included in the message</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>recipients</code></th>
+						<td><p>An array of recipient user IDs.  The array must contain at least one user ID.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>videoURL</code></th>
+						<td><p>An optional URL that points to the video to be uploaded.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>skipEncoding</code></th>
+						<td><p>BOOL to bypass Elemental encoding and encryption.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completedBlock</code></th>
+						<td><p>A block that gets called upon successfully sending the message.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorBlock</code></th>
+						<td><p>A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new message object that represents the message being sent.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Sends a message to recipients with the option to skip encoding the video</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:completeBlock:errorBlock:" title="sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:completeBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:completeBlock:errorBlock:">&ndash;&nbsp;sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:completeBlock:errorBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sends a message to recipients with the option to skip encoding the video while providing your own message guid</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (ACLIPMessage *)sendMessage:(NSString *)<em>title</em> messageText:(NSString *)<em>messageText</em> recipients:(NSArray *)<em>recipients</em> videoURL:(NSURL *)<em>videoURL</em> skipEncoding:(BOOL)<em>skipEncoding</em> messageGuid:(NSString *)<em>messageGuid</em> completeBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>title</code></th>
+						<td><p>An optional title for the message.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>messageText</code></th>
+						<td><p>An optional text message that can be included in the message</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>recipients</code></th>
+						<td><p>An array of recipient user IDs.  The array must contain at least one user ID.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>videoURL</code></th>
+						<td><p>An optional URL that points to the video to be uploaded.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>skipEncoding</code></th>
+						<td><p>BOOL to bypass Elemental encoding and encryption.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>messageGuid</code></th>
+						<td><p>An optional message GUID to use for the message.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completedBlock</code></th>
+						<td><p>A block that gets called upon successfully sending the message.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorBlock</code></th>
+						<td><p>A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new message object that represents the message being sent.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Sends a message to recipients with the option to skip encoding the video while providing your own message guid</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/forwardMessage:messageText:recipients:video:oldMessageGuid:newMessageGuid:completeBlock:errorBlock:" title="forwardMessage:messageText:recipients:video:oldMessageGuid:newMessageGuid:completeBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/forwardMessage:messageText:recipients:video:oldMessageGuid:newMessageGuid:completeBlock:errorBlock:">&ndash;&nbsp;forwardMessage:messageText:recipients:video:oldMessageGuid:newMessageGuid:completeBlock:errorBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Forwards a message to recipients</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (ACLIPMessage *)forwardMessage:(NSString *)<em>title</em> messageText:(NSString *)<em>messageText</em> recipients:(NSArray *)<em>recipients</em> video:(ACLIPVideo *)<em>video</em> oldMessageGuid:(NSString *)<em>oldMessageGuid</em> newMessageGuid:(NSString *)<em>newMessageGuid</em> completeBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>title</code></th>
+						<td><p>An optional title for the message.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>messageText</code></th>
+						<td><p>An optional text message that can be included in the message</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>recipients</code></th>
+						<td><p>An array of recipient user IDs.  The array must contain at least one user ID.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>video</code></th>
+						<td><p>An optional <a href="../Classes/ACLIPVideo.html">ACLIPVideo</a> belonging to the forwarded message.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>oldMessageGuid</code></th>
+						<td><p>The guid of the message that is being forwarded.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>newMessageGuid</code></th>
+						<td><p>The guid of the new message=.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completedBlock</code></th>
+						<td><p>A block that gets called upon successfully sending the message.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorBlock</code></th>
+						<td><p>A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new message object that represents the message being sent.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Forwards a message to recipients</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteMessages:completeBlock:errorBlock:" title="deleteMessages:completeBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteMessages:completeBlock:errorBlock:">&ndash;&nbsp;deleteMessages:completeBlock:errorBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Deletes the <a href="../Classes/ACLIPMessage.html">ACLIPMessage</a> objects</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteMessages:(NSArray *)<em>messages</em> completeBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>messages</code></th>
+						<td><p>An NSArray of <a href="../Classes/ACLIPMessage.html">ACLIPMessage</a> objects to be deleted.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completedBlock</code></th>
+						<td><p>A block that gets called upon successfully loading the video list. The completeBlock may be called more then once if cached results exist.  completedBlock can be nil.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorBlock</code></th>
+						<td><p>A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Deletes the <a href="../Classes/ACLIPMessage.html">ACLIPMessage</a> objects</p>
+
+<p>The call is asyncronous and either the completedBlock or the errorBlock will be called upon the network connection terminating. The messages are not deleted from the data store until the network connections successfully completes.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerAPNSToken:" title="registerAPNSToken:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerAPNSToken:">&ndash;&nbsp;registerAPNSToken:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Register the device to receive push notifications. This should be called inside the application&rsquo;s &ldquo;didRegisterForRemoteNotificationsWithDeviceToken&rdquo; method</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)registerAPNSToken:(NSData *)<em>deviceToken</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceToken</code></th>
+						<td><p>The NSData token included in the application&rsquo;s &ldquo;didRegisterForRemoteNotificationsWithDeviceToken&rdquo; method.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Register the device to receive push notifications. This should be called inside the application&rsquo;s &ldquo;didRegisterForRemoteNotificationsWithDeviceToken&rdquo; method</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/canEncodeVideos" title="canEncodeVideos"></a>
+	<h3 class="method-title"><code><a href="#//api/name/canEncodeVideos">&ndash;&nbsp;canEncodeVideos</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Check for session&rsquo;s ability to encode videos</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)canEncodeVideos</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL stating whether or not the session should encode videos.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Check for session&rsquo;s ability to encode videos</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 Aclipsa. All rights reserved. Updated: 2015-03-05</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

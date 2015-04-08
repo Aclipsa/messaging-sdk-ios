@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/ACLIPSession.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/ACLIPSession</TokenIdentifier>
+			<Abstract type="html">An ACLIPSession encapsulates the communication session between the client application and the Aclipsa server.  A session MUST be created before any other calls to the AclipsaSDK can occur.  n ACLIPInvalidSessionExecption will be thrown if a session has not been created.</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+            
+			
+			<NodeRef refid="7"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/setAppID:</TokenIdentifier>
+			<Abstract type="html">The appID of the active session</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *appID</Declaration>
+			
+			
+			<Anchor>//api/name/appID</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/appID</TokenIdentifier>
+			<Abstract type="html">The appID of the active session</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *appID</Declaration>
+			
+			
+			<Anchor>//api/name/appID</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPSession/appID</TokenIdentifier>
+			<Abstract type="html">The appID of the active session</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *appID</Declaration>
+			
+			
+			<Anchor>//api/name/appID</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/setUserID:</TokenIdentifier>
+			<Abstract type="html">The userID currently logged into the active session</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *userID</Declaration>
+			
+			
+			<Anchor>//api/name/userID</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/userID</TokenIdentifier>
+			<Abstract type="html">The userID currently logged into the active session</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *userID</Declaration>
+			
+			
+			<Anchor>//api/name/userID</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPSession/userID</TokenIdentifier>
+			<Abstract type="html">The userID currently logged into the active session</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *userID</Declaration>
+			
+			
+			<Anchor>//api/name/userID</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/setServerEnvironment:</TokenIdentifier>
+			<Abstract type="html">The flag indicating which server should be used.  Defaults to ACLIPDevelopmentServer</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPServerEnvironment serverEnvironment</Declaration>
+			
+			
+			<Anchor>//api/name/serverEnvironment</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/serverEnvironment</TokenIdentifier>
+			<Abstract type="html">The flag indicating which server should be used.  Defaults to ACLIPDevelopmentServer</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPServerEnvironment serverEnvironment</Declaration>
+			
+			
+			<Anchor>//api/name/serverEnvironment</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPSession/serverEnvironment</TokenIdentifier>
+			<Abstract type="html">The flag indicating which server should be used.  Defaults to ACLIPDevelopmentServer</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPServerEnvironment serverEnvironment</Declaration>
+			
+			
+			<Anchor>//api/name/serverEnvironment</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ACLIPSession/createSessionWithAppID:serverEnvironment:</TokenIdentifier>
+			<Abstract type="html">An appication may get or set the current active session.</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>+ (ACLIPSession *)createSessionWithAppID:(NSString *)appID serverEnvironment:(ACLIPServerEnvironment)serverType</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>appID</Name>
+					<Abstract type="html">The id string for the app provided by the AclipsaSDK admin site.</Abstract>
+				</Parameter><Parameter>
+					<Name>serverType</Name>
+					<Abstract type="html">An ACLIPServerEnvironment value for which server environment should be used.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An active ACLIPSession for the appID.</Abstract></ReturnValue>
+			<Anchor>//api/name/createSessionWithAppID:serverEnvironment:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ACLIPSession/activeSession</TokenIdentifier>
+			<Abstract type="html">An appication may get or set the current active session.</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>+ (ACLIPSession *)activeSession</Declaration>
+			
+			
+			<Anchor>//api/name/activeSession</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/loginWithUserID:completionBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Logs the user with userID in as the user for the session</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (void)loginWithUserID:(NSString *)userID completionBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>userID</Name>
+					<Abstract type="html">The id string for the user to be logged in.</Abstract>
+				</Parameter><Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully logging in.  completedBlock can be nil if no post login action is required.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/loginWithUserID:completionBlock:errorBlock:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/logoutWithCompletionBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Logs the user out for the session</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (void)logoutWithCompletionBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully logging out.  completedBlock can be nil if no post login action is required.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/logoutWithCompletionBlock:errorBlock:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/deleteUserWithID:completionBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Deletes the user associated with the session</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (void)deleteUserWithID:(NSString *)userID completionBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>userID</Name>
+					<Abstract type="html">The id string for the user to be deleted.</Abstract>
+				</Parameter><Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully deleting the user.  completedBlock can be nil if no post deletion action is required.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/deleteUserWithID:completionBlock:errorBlock:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/uploadVideoAtURL:title:attributes:completeBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Uploads the video file at videoURL.</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (ACLIPVideo *)uploadVideoAtURL:(NSURL *)videoURL title:(NSString *)title attributes:(NSDictionary *)attributes completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>videoURL</Name>
+					<Abstract type="html">A URL that points to the video to be uploaded. Can not be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>title</Name>
+					<Abstract type="html">A title for the video.</Abstract>
+				</Parameter><Parameter>
+					<Name>attributes</Name>
+					<Abstract type="html">The attributes of the video. All values must be of types suppored by NSJSONSerialization.</Abstract>
+				</Parameter><Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully uploading the video.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new video object that represents the video being uploaded.</Abstract></ReturnValue>
+			<Anchor>//api/name/uploadVideoAtURL:title:attributes:completeBlock:errorBlock:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/uploadVideoAtURL:title:attributes:skipEncoding:completeBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Uploads the video file at videoURL.</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (ACLIPVideo *)uploadVideoAtURL:(NSURL *)videoURL title:(NSString *)title attributes:(NSDictionary *)attributes skipEncoding:(BOOL)skipEncoding completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>videoURL</Name>
+					<Abstract type="html">A URL that points to the video to be uploaded. Can not be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>title</Name>
+					<Abstract type="html">A title for the video.</Abstract>
+				</Parameter><Parameter>
+					<Name>attributes</Name>
+					<Abstract type="html">The attributes of the video. All values must be of types suppored by NSJSONSerialization.</Abstract>
+				</Parameter><Parameter>
+					<Name>skipEncoding</Name>
+					<Abstract type="html">BOOL to bypass Elemental encoding and encryption.</Abstract>
+				</Parameter><Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully uploading the video.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new video object that represents the video being uploaded.</Abstract></ReturnValue>
+			<Anchor>//api/name/uploadVideoAtURL:title:attributes:skipEncoding:completeBlock:errorBlock:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/loadUserVideoWithID:completionBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Loads the video for the given videoID.</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (void)loadUserVideoWithID:(NSString *)videoID completionBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>videoID</Name>
+					<Abstract type="html">The ID of the video to load.</Abstract>
+				</Parameter><Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully loading the video. The completedBlock parameter will be the ACLIPVideo for the videoID.  completedBlock can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/loadUserVideoWithID:completionBlock:errorBlock:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/loadUserVideosWithCompletionBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Loads the videos for the logged in user.</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (void)loadUserVideosWithCompletionBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully loading the video list. The completeBlock may be called more then once if cached results exist.  completedBlock can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/loadUserVideosWithCompletionBlock:errorBlock:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/loadUserVideosWithFilter:completionBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Loads the videos for the logged in user.</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (void)loadUserVideosWithFilter:(NSPredicate *)predicate completionBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">An NSPredicate that will filter the results based the video&apos;s custom attributes. Currently only is equal (==) operators are supported.</Abstract>
+				</Parameter><Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully loading the video list. The completeBlock may be called more then once if cached results exist.  completedBlock can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/loadUserVideosWithFilter:completionBlock:errorBlock:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/loadMessageWithGUID:completeBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Loads the message for the given guid.</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (void)loadMessageWithGUID:(NSString *)guid completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>guid</Name>
+					<Abstract type="html">The ID of the message to load.</Abstract>
+				</Parameter><Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully loading the video. The completedBlock parameter will be the ACLIPMessage for the guid.  completedBlock can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/loadMessageWithGUID:completeBlock:errorBlock:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/registerMessageLoadingCompletionBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Registers the completion and error blocks for message loading.</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (void)registerMessageLoadingCompletionBlock:(ACLIPMessageLoadCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully loading the messages list. The first NSArray paramater will return a list of all messages for the user. The second will contain an array of ACLIPMessageThread objects.  The completeBlock may be called more then once if cached results exist.  completedBlock can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/registerMessageLoadingCompletionBlock:errorBlock:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/unregisterMessageLoading</TokenIdentifier>
+			<Abstract type="html">Unregisters the completion and error blocks that were registered in registerMessageLoadingCompletionBlock:errorBlock:. The blocks will not be called again.</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (void)unregisterMessageLoading</Declaration>
+			
+			
+			<Anchor>//api/name/unregisterMessageLoading</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/sendMessage:messageText:recipients:videoURL:completeBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Sends a message to recipients</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (ACLIPMessage *)sendMessage:(NSString *)title messageText:(NSString *)messageText recipients:(NSArray *)recipients videoURL:(NSURL *)videoURL completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>title</Name>
+					<Abstract type="html">An optional title for the message.</Abstract>
+				</Parameter><Parameter>
+					<Name>messageText</Name>
+					<Abstract type="html">An optional text message that can be included in the message</Abstract>
+				</Parameter><Parameter>
+					<Name>recipients</Name>
+					<Abstract type="html">An array of recipient user IDs.  The array must contain at least one user ID.</Abstract>
+				</Parameter><Parameter>
+					<Name>videoURL</Name>
+					<Abstract type="html">An optional URL that points to the video to be uploaded.</Abstract>
+				</Parameter><Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully sending the message.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new message object that represents the message being sent.</Abstract></ReturnValue>
+			<Anchor>//api/name/sendMessage:messageText:recipients:videoURL:completeBlock:errorBlock:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/sendMessage:messageText:recipients:videoURL:messageGuid:completeBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Sends a message to recipients while providing your own message guid</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (ACLIPMessage *)sendMessage:(NSString *)title messageText:(NSString *)messageText recipients:(NSArray *)recipients videoURL:(NSURL *)videoURL messageGuid:(NSString *)messageGuid completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>title</Name>
+					<Abstract type="html">An optional title for the message.</Abstract>
+				</Parameter><Parameter>
+					<Name>messageText</Name>
+					<Abstract type="html">An optional text message that can be included in the message</Abstract>
+				</Parameter><Parameter>
+					<Name>recipients</Name>
+					<Abstract type="html">An array of recipient user IDs.  The array must contain at least one user ID.</Abstract>
+				</Parameter><Parameter>
+					<Name>videoURL</Name>
+					<Abstract type="html">An optional URL that points to the video to be uploaded.</Abstract>
+				</Parameter><Parameter>
+					<Name>messageGuid</Name>
+					<Abstract type="html">An optional message GUID to use for the message.</Abstract>
+				</Parameter><Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully sending the message.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new message object that represents the message being sent.</Abstract></ReturnValue>
+			<Anchor>//api/name/sendMessage:messageText:recipients:videoURL:messageGuid:completeBlock:errorBlock:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/sendMessage:messageText:recipients:videoURL:skipEncoding:completeBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Sends a message to recipients with the option to skip encoding the video</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (ACLIPMessage *)sendMessage:(NSString *)title messageText:(NSString *)messageText recipients:(NSArray *)recipients videoURL:(NSURL *)videoURL skipEncoding:(BOOL)skipEncoding completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>title</Name>
+					<Abstract type="html">An optional title for the message.</Abstract>
+				</Parameter><Parameter>
+					<Name>messageText</Name>
+					<Abstract type="html">An optional text message that can be included in the message</Abstract>
+				</Parameter><Parameter>
+					<Name>recipients</Name>
+					<Abstract type="html">An array of recipient user IDs.  The array must contain at least one user ID.</Abstract>
+				</Parameter><Parameter>
+					<Name>videoURL</Name>
+					<Abstract type="html">An optional URL that points to the video to be uploaded.</Abstract>
+				</Parameter><Parameter>
+					<Name>skipEncoding</Name>
+					<Abstract type="html">BOOL to bypass Elemental encoding and encryption.</Abstract>
+				</Parameter><Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully sending the message.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new message object that represents the message being sent.</Abstract></ReturnValue>
+			<Anchor>//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:completeBlock:errorBlock:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:completeBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Sends a message to recipients with the option to skip encoding the video while providing your own message guid</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (ACLIPMessage *)sendMessage:(NSString *)title messageText:(NSString *)messageText recipients:(NSArray *)recipients videoURL:(NSURL *)videoURL skipEncoding:(BOOL)skipEncoding messageGuid:(NSString *)messageGuid completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>title</Name>
+					<Abstract type="html">An optional title for the message.</Abstract>
+				</Parameter><Parameter>
+					<Name>messageText</Name>
+					<Abstract type="html">An optional text message that can be included in the message</Abstract>
+				</Parameter><Parameter>
+					<Name>recipients</Name>
+					<Abstract type="html">An array of recipient user IDs.  The array must contain at least one user ID.</Abstract>
+				</Parameter><Parameter>
+					<Name>videoURL</Name>
+					<Abstract type="html">An optional URL that points to the video to be uploaded.</Abstract>
+				</Parameter><Parameter>
+					<Name>skipEncoding</Name>
+					<Abstract type="html">BOOL to bypass Elemental encoding and encryption.</Abstract>
+				</Parameter><Parameter>
+					<Name>messageGuid</Name>
+					<Abstract type="html">An optional message GUID to use for the message.</Abstract>
+				</Parameter><Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully sending the message.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new message object that represents the message being sent.</Abstract></ReturnValue>
+			<Anchor>//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:completeBlock:errorBlock:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/forwardMessage:messageText:recipients:video:oldMessageGuid:newMessageGuid:completeBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Forwards a message to recipients</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (ACLIPMessage *)forwardMessage:(NSString *)title messageText:(NSString *)messageText recipients:(NSArray *)recipients video:(ACLIPVideo *)video oldMessageGuid:(NSString *)oldMessageGuid newMessageGuid:(NSString *)newMessageGuid completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>title</Name>
+					<Abstract type="html">An optional title for the message.</Abstract>
+				</Parameter><Parameter>
+					<Name>messageText</Name>
+					<Abstract type="html">An optional text message that can be included in the message</Abstract>
+				</Parameter><Parameter>
+					<Name>recipients</Name>
+					<Abstract type="html">An array of recipient user IDs.  The array must contain at least one user ID.</Abstract>
+				</Parameter><Parameter>
+					<Name>video</Name>
+					<Abstract type="html">An optional ACLIPVideo belonging to the forwarded message.</Abstract>
+				</Parameter><Parameter>
+					<Name>oldMessageGuid</Name>
+					<Abstract type="html">The guid of the message that is being forwarded.</Abstract>
+				</Parameter><Parameter>
+					<Name>newMessageGuid</Name>
+					<Abstract type="html">The guid of the new message=.</Abstract>
+				</Parameter><Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully sending the message.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new message object that represents the message being sent.</Abstract></ReturnValue>
+			<Anchor>//api/name/forwardMessage:messageText:recipients:video:oldMessageGuid:newMessageGuid:completeBlock:errorBlock:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/deleteMessages:completeBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Deletes the ACLIPMessage objects</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (void)deleteMessages:(NSArray *)messages completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>messages</Name>
+					<Abstract type="html">An NSArray of ACLIPMessage objects to be deleted.</Abstract>
+				</Parameter><Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully loading the video list. The completeBlock may be called more then once if cached results exist.  completedBlock can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/deleteMessages:completeBlock:errorBlock:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/registerAPNSToken:</TokenIdentifier>
+			<Abstract type="html">Register the device to receive push notifications. This should be called inside the application&apos;s &quot;didRegisterForRemoteNotificationsWithDeviceToken&quot; method</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (void)registerAPNSToken:(NSData *)deviceToken</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>deviceToken</Name>
+					<Abstract type="html">The NSData token included in the application&apos;s &quot;didRegisterForRemoteNotificationsWithDeviceToken&quot; method.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/registerAPNSToken:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/canEncodeVideos</TokenIdentifier>
+			<Abstract type="html">Check for session&apos;s ability to encode videos</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)canEncodeVideos</Declaration>
+			
+			<ReturnValue><Abstract type="html">BOOL stating whether or not the session should encode videos.</Abstract></ReturnValue>
+			<Anchor>//api/name/canEncodeVideos</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

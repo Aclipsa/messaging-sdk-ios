@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/ACLIPMessageThread.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/ACLIPMessageThread</TokenIdentifier>
+			<Abstract type="html">An ACLIPMessageThread is a collection of messages between n number of users.</Abstract>
+			<DeclaredIn>ACLIPMessageThread.h</DeclaredIn>
+            
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessageThread/setThreadID:</TokenIdentifier>
+			<Abstract type="html">The threads ID</Abstract>
+			<DeclaredIn>ACLIPMessageThread.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *threadID</Declaration>
+			
+			
+			<Anchor>//api/name/threadID</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessageThread/threadID</TokenIdentifier>
+			<Abstract type="html">The threads ID</Abstract>
+			<DeclaredIn>ACLIPMessageThread.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *threadID</Declaration>
+			
+			
+			<Anchor>//api/name/threadID</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPMessageThread/threadID</TokenIdentifier>
+			<Abstract type="html">The threads ID</Abstract>
+			<DeclaredIn>ACLIPMessageThread.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *threadID</Declaration>
+			
+			
+			<Anchor>//api/name/threadID</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessageThread/setUsers:</TokenIdentifier>
+			<Abstract type="html">The the ACLIPUsers that belong to the thread</Abstract>
+			<DeclaredIn>ACLIPMessageThread.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSSet *users</Declaration>
+			
+			
+			<Anchor>//api/name/users</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessageThread/users</TokenIdentifier>
+			<Abstract type="html">The the ACLIPUsers that belong to the thread</Abstract>
+			<DeclaredIn>ACLIPMessageThread.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSSet *users</Declaration>
+			
+			
+			<Anchor>//api/name/users</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPMessageThread/users</TokenIdentifier>
+			<Abstract type="html">The the ACLIPUsers that belong to the thread</Abstract>
+			<DeclaredIn>ACLIPMessageThread.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSSet *users</Declaration>
+			
+			
+			<Anchor>//api/name/users</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessageThread/setMessages:</TokenIdentifier>
+			<Abstract type="html">The messages that belong to the thread</Abstract>
+			<DeclaredIn>ACLIPMessageThread.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSSet *messages</Declaration>
+			
+			
+			<Anchor>//api/name/messages</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessageThread/messages</TokenIdentifier>
+			<Abstract type="html">The messages that belong to the thread</Abstract>
+			<DeclaredIn>ACLIPMessageThread.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSSet *messages</Declaration>
+			
+			
+			<Anchor>//api/name/messages</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPMessageThread/messages</TokenIdentifier>
+			<Abstract type="html">The messages that belong to the thread</Abstract>
+			<DeclaredIn>ACLIPMessageThread.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSSet *messages</Declaration>
+			
+			
+			<Anchor>//api/name/messages</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessageThread/setLastMessage:</TokenIdentifier>
+			<Abstract type="html">The last message that was sent that belongs to the thread</Abstract>
+			<DeclaredIn>ACLIPMessageThread.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPMessage *lastMessage</Declaration>
+			
+			
+			<Anchor>//api/name/lastMessage</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessageThread/lastMessage</TokenIdentifier>
+			<Abstract type="html">The last message that was sent that belongs to the thread</Abstract>
+			<DeclaredIn>ACLIPMessageThread.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPMessage *lastMessage</Declaration>
+			
+			
+			<Anchor>//api/name/lastMessage</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPMessageThread/lastMessage</TokenIdentifier>
+			<Abstract type="html">The last message that was sent that belongs to the thread</Abstract>
+			<DeclaredIn>ACLIPMessageThread.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPMessage *lastMessage</Declaration>
+			
+			
+			<Anchor>//api/name/lastMessage</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessageThread/setSortedMessages:</TokenIdentifier>
+			<Abstract type="html">Returns the messages sorted in assending order by date</Abstract>
+			<DeclaredIn>ACLIPMessageThread.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *sortedMessages</Declaration>
+			
+			
+			<Anchor>//api/name/sortedMessages</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessageThread/sortedMessages</TokenIdentifier>
+			<Abstract type="html">Returns the messages sorted in assending order by date</Abstract>
+			<DeclaredIn>ACLIPMessageThread.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *sortedMessages</Declaration>
+			
+			
+			<Anchor>//api/name/sortedMessages</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPMessageThread/sortedMessages</TokenIdentifier>
+			<Abstract type="html">Returns the messages sorted in assending order by date</Abstract>
+			<DeclaredIn>ACLIPMessageThread.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *sortedMessages</Declaration>
+			
+			
+			<Anchor>//api/name/sortedMessages</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPMessageThread/userListString</TokenIdentifier>
+			<Abstract type="html">Returns a comma-separated string of all the user GUIDs in the message thread for display</Abstract>
+			<DeclaredIn>ACLIPMessageThread.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)userListString</Declaration>
+			
+			
+			<Anchor>//api/name/userListString</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>
