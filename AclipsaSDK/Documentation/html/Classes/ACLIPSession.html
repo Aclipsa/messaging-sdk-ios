@@ -102,13 +102,15 @@
 		
 		<option value="//api/name/registerMessageLoadingCompletionBlock:errorBlock:">- registerMessageLoadingCompletionBlock:errorBlock:</option>
 		
-		<option value="//api/name/sendMessage:messageText:recipients:videoURL:completeBlock:errorBlock:">- sendMessage:messageText:recipients:videoURL:completeBlock:errorBlock:</option>
+		<option value="//api/name/registerMessageLoadingSinceDate:completionBlock:errorBlock:">- registerMessageLoadingSinceDate:completionBlock:errorBlock:</option>
 		
-		<option value="//api/name/sendMessage:messageText:recipients:videoURL:messageGuid:completeBlock:errorBlock:">- sendMessage:messageText:recipients:videoURL:messageGuid:completeBlock:errorBlock:</option>
+		<option value="//api/name/sendMessage:messageText:recipients:videoURL:attributes:completeBlock:errorBlock:">- sendMessage:messageText:recipients:videoURL:attributes:completeBlock:errorBlock:</option>
 		
-		<option value="//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:completeBlock:errorBlock:">- sendMessage:messageText:recipients:videoURL:skipEncoding:completeBlock:errorBlock:</option>
+		<option value="//api/name/sendMessage:messageText:recipients:videoURL:messageGuid:attributes:completeBlock:errorBlock:">- sendMessage:messageText:recipients:videoURL:messageGuid:attributes:completeBlock:errorBlock:</option>
 		
-		<option value="//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:completeBlock:errorBlock:">- sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:completeBlock:errorBlock:</option>
+		<option value="//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:attributes:completeBlock:errorBlock:">- sendMessage:messageText:recipients:videoURL:skipEncoding:attributes:completeBlock:errorBlock:</option>
+		
+		<option value="//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:attributes:completeBlock:errorBlock:">- sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:attributes:completeBlock:errorBlock:</option>
 		
 		<option value="//api/name/unregisterMessageLoading">- unregisterMessageLoading</option>
 		
@@ -1144,6 +1146,76 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/registerMessageLoadingSinceDate:completionBlock:errorBlock:" title="registerMessageLoadingSinceDate:completionBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerMessageLoadingSinceDate:completionBlock:errorBlock:">&ndash;&nbsp;registerMessageLoadingSinceDate:completionBlock:errorBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Registers the completion and error blocks for message loading.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)registerMessageLoadingSinceDate:(NSDate *)<em>date</em> completionBlock:(ACLIPMessageLoadCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completedBlock</code></th>
+						<td><p>A block that gets called upon successfully loading the messages list. The first NSArray paramater will return a list of all messages for the user. The second will contain an array of <a href="../Classes/ACLIPMessageThread.html">ACLIPMessageThread</a> objects.  The completeBlock may be called more then once if cached results exist.  completedBlock can be nil.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorBlock</code></th>
+						<td><p>A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>a</code></th>
+						<td><p>NSDate where only messages newer than the date will be loaded.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Registers the completion and error blocks for message loading.</p>
+
+<p>The call registers a completion and error block for loading messages.  The completion block will be called when ever messages are available.  Multiple calls will replace the previous blocks with the new blocks.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ACLIPSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/unregisterMessageLoading" title="unregisterMessageLoading"></a>
 	<h3 class="method-title"><code><a href="#//api/name/unregisterMessageLoading">&ndash;&nbsp;unregisterMessageLoading</a></code>
 </h3>
@@ -1190,8 +1262,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/sendMessage:messageText:recipients:videoURL:completeBlock:errorBlock:" title="sendMessage:messageText:recipients:videoURL:completeBlock:errorBlock:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sendMessage:messageText:recipients:videoURL:completeBlock:errorBlock:">&ndash;&nbsp;sendMessage:messageText:recipients:videoURL:completeBlock:errorBlock:</a></code>
+	<a name="//api/name/sendMessage:messageText:recipients:videoURL:attributes:completeBlock:errorBlock:" title="sendMessage:messageText:recipients:videoURL:attributes:completeBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendMessage:messageText:recipients:videoURL:attributes:completeBlock:errorBlock:">&ndash;&nbsp;sendMessage:messageText:recipients:videoURL:attributes:completeBlock:errorBlock:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1206,7 +1278,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (ACLIPMessage *)sendMessage:(NSString *)<em>title</em> messageText:(NSString *)<em>messageText</em> recipients:(NSArray *)<em>recipients</em> videoURL:(NSURL *)<em>videoURL</em> completeBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (ACLIPMessage *)sendMessage:(NSString *)<em>title</em> messageText:(NSString *)<em>messageText</em> recipients:(NSArray *)<em>recipients</em> videoURL:(NSURL *)<em>videoURL</em> attributes:(NSDictionary *)<em>attributes</em> completeBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
 
 		    
 			
@@ -1232,6 +1304,11 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>videoURL</code></th>
 						<td><p>An optional URL that points to the video to be uploaded.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>attributes</code></th>
+						<td><p>The attributes of the message. All values must be of types suppored by NSJSONSerialization.</p></td>
 					</tr>
 				
 					<tr>
@@ -1278,8 +1355,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/sendMessage:messageText:recipients:videoURL:messageGuid:completeBlock:errorBlock:" title="sendMessage:messageText:recipients:videoURL:messageGuid:completeBlock:errorBlock:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sendMessage:messageText:recipients:videoURL:messageGuid:completeBlock:errorBlock:">&ndash;&nbsp;sendMessage:messageText:recipients:videoURL:messageGuid:completeBlock:errorBlock:</a></code>
+	<a name="//api/name/sendMessage:messageText:recipients:videoURL:messageGuid:attributes:completeBlock:errorBlock:" title="sendMessage:messageText:recipients:videoURL:messageGuid:attributes:completeBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendMessage:messageText:recipients:videoURL:messageGuid:attributes:completeBlock:errorBlock:">&ndash;&nbsp;sendMessage:messageText:recipients:videoURL:messageGuid:attributes:completeBlock:errorBlock:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1294,7 +1371,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (ACLIPMessage *)sendMessage:(NSString *)<em>title</em> messageText:(NSString *)<em>messageText</em> recipients:(NSArray *)<em>recipients</em> videoURL:(NSURL *)<em>videoURL</em> messageGuid:(NSString *)<em>messageGuid</em> completeBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (ACLIPMessage *)sendMessage:(NSString *)<em>title</em> messageText:(NSString *)<em>messageText</em> recipients:(NSArray *)<em>recipients</em> videoURL:(NSURL *)<em>videoURL</em> messageGuid:(NSString *)<em>messageGuid</em> attributes:(NSDictionary *)<em>attributes</em> completeBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
 
 		    
 			
@@ -1328,6 +1405,11 @@
 					</tr>
 				
 					<tr>
+						<th scope="row" class="argument-name"><code>attributes</code></th>
+						<td><p>The attributes of the message. All values must be of types suppored by NSJSONSerialization.</p></td>
+					</tr>
+				
+					<tr>
 						<th scope="row" class="argument-name"><code>completedBlock</code></th>
 						<td><p>A block that gets called upon successfully sending the message.</p></td>
 					</tr>
@@ -1371,8 +1453,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:completeBlock:errorBlock:" title="sendMessage:messageText:recipients:videoURL:skipEncoding:completeBlock:errorBlock:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:completeBlock:errorBlock:">&ndash;&nbsp;sendMessage:messageText:recipients:videoURL:skipEncoding:completeBlock:errorBlock:</a></code>
+	<a name="//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:attributes:completeBlock:errorBlock:" title="sendMessage:messageText:recipients:videoURL:skipEncoding:attributes:completeBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:attributes:completeBlock:errorBlock:">&ndash;&nbsp;sendMessage:messageText:recipients:videoURL:skipEncoding:attributes:completeBlock:errorBlock:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1387,7 +1469,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (ACLIPMessage *)sendMessage:(NSString *)<em>title</em> messageText:(NSString *)<em>messageText</em> recipients:(NSArray *)<em>recipients</em> videoURL:(NSURL *)<em>videoURL</em> skipEncoding:(BOOL)<em>skipEncoding</em> completeBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (ACLIPMessage *)sendMessage:(NSString *)<em>title</em> messageText:(NSString *)<em>messageText</em> recipients:(NSArray *)<em>recipients</em> videoURL:(NSURL *)<em>videoURL</em> skipEncoding:(BOOL)<em>skipEncoding</em> attributes:(NSDictionary *)<em>attributes</em> completeBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
 
 		    
 			
@@ -1418,6 +1500,11 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>skipEncoding</code></th>
 						<td><p>BOOL to bypass Elemental encoding and encryption.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>attributes</code></th>
+						<td><p>The attributes of the message. All values must be of types suppored by NSJSONSerialization.</p></td>
 					</tr>
 				
 					<tr>
@@ -1464,8 +1551,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:completeBlock:errorBlock:" title="sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:completeBlock:errorBlock:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:completeBlock:errorBlock:">&ndash;&nbsp;sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:completeBlock:errorBlock:</a></code>
+	<a name="//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:attributes:completeBlock:errorBlock:" title="sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:attributes:completeBlock:errorBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:attributes:completeBlock:errorBlock:">&ndash;&nbsp;sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:attributes:completeBlock:errorBlock:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1480,7 +1567,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (ACLIPMessage *)sendMessage:(NSString *)<em>title</em> messageText:(NSString *)<em>messageText</em> recipients:(NSArray *)<em>recipients</em> videoURL:(NSURL *)<em>videoURL</em> skipEncoding:(BOOL)<em>skipEncoding</em> messageGuid:(NSString *)<em>messageGuid</em> completeBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (ACLIPMessage *)sendMessage:(NSString *)<em>title</em> messageText:(NSString *)<em>messageText</em> recipients:(NSArray *)<em>recipients</em> videoURL:(NSURL *)<em>videoURL</em> skipEncoding:(BOOL)<em>skipEncoding</em> messageGuid:(NSString *)<em>messageGuid</em> attributes:(NSDictionary *)<em>attributes</em> completeBlock:(ACLIPNetworkCompleteBlock)<em>completedBlock</em> errorBlock:(ACLIPNetworkErrorBlock)<em>errorBlock</em></code></div>
 
 		    
 			
@@ -1516,6 +1603,11 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>messageGuid</code></th>
 						<td><p>An optional message GUID to use for the message.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>attributes</code></th>
+						<td><p>The attributes of the message. All values must be of types suppored by NSJSONSerialization.</p></td>
 					</tr>
 				
 					<tr>
@@ -1851,7 +1943,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Aclipsa. All rights reserved. Updated: 2015-03-05</p>
+						<p class="copyright">Copyright &copy; 2015 Aclipsa. All rights reserved. Updated: 2015-06-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

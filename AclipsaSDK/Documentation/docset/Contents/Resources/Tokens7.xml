@@ -389,6 +389,29 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/registerMessageLoadingSinceDate:completionBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Registers the completion and error blocks for message loading.</Abstract>
+			<DeclaredIn>ACLIPSession.h</DeclaredIn>
+			
+			<Declaration>- (void)registerMessageLoadingSinceDate:(NSDate *)date completionBlock:(ACLIPMessageLoadCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully loading the messages list. The first NSArray paramater will return a list of all messages for the user. The second will contain an array of ACLIPMessageThread objects.  The completeBlock may be called more then once if cached results exist.  completedBlock can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter><Parameter>
+					<Name>a</Name>
+					<Abstract type="html">NSDate where only messages newer than the date will be loaded.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/registerMessageLoadingSinceDate:completionBlock:errorBlock:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/unregisterMessageLoading</TokenIdentifier>
 			<Abstract type="html">Unregisters the completion and error blocks that were registered in registerMessageLoadingCompletionBlock:errorBlock:. The blocks will not be called again.</Abstract>
 			<DeclaredIn>ACLIPSession.h</DeclaredIn>
@@ -401,11 +424,11 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/sendMessage:messageText:recipients:videoURL:completeBlock:errorBlock:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/sendMessage:messageText:recipients:videoURL:attributes:completeBlock:errorBlock:</TokenIdentifier>
 			<Abstract type="html">Sends a message to recipients</Abstract>
 			<DeclaredIn>ACLIPSession.h</DeclaredIn>
 			
-			<Declaration>- (ACLIPMessage *)sendMessage:(NSString *)title messageText:(NSString *)messageText recipients:(NSArray *)recipients videoURL:(NSURL *)videoURL completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Declaration>- (ACLIPMessage *)sendMessage:(NSString *)title messageText:(NSString *)messageText recipients:(NSArray *)recipients videoURL:(NSURL *)videoURL attributes:(NSDictionary *)attributes completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>title</Name>
@@ -420,6 +443,9 @@
 					<Name>videoURL</Name>
 					<Abstract type="html">An optional URL that points to the video to be uploaded.</Abstract>
 				</Parameter><Parameter>
+					<Name>attributes</Name>
+					<Abstract type="html">The attributes of the message. All values must be of types suppored by NSJSONSerialization.</Abstract>
+				</Parameter><Parameter>
 					<Name>completedBlock</Name>
 					<Abstract type="html">A block that gets called upon successfully sending the message.</Abstract>
 				</Parameter><Parameter>
@@ -428,16 +454,16 @@
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">A new message object that represents the message being sent.</Abstract></ReturnValue>
-			<Anchor>//api/name/sendMessage:messageText:recipients:videoURL:completeBlock:errorBlock:</Anchor>
+			<Anchor>//api/name/sendMessage:messageText:recipients:videoURL:attributes:completeBlock:errorBlock:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/sendMessage:messageText:recipients:videoURL:messageGuid:completeBlock:errorBlock:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/sendMessage:messageText:recipients:videoURL:messageGuid:attributes:completeBlock:errorBlock:</TokenIdentifier>
 			<Abstract type="html">Sends a message to recipients while providing your own message guid</Abstract>
 			<DeclaredIn>ACLIPSession.h</DeclaredIn>
 			
-			<Declaration>- (ACLIPMessage *)sendMessage:(NSString *)title messageText:(NSString *)messageText recipients:(NSArray *)recipients videoURL:(NSURL *)videoURL messageGuid:(NSString *)messageGuid completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Declaration>- (ACLIPMessage *)sendMessage:(NSString *)title messageText:(NSString *)messageText recipients:(NSArray *)recipients videoURL:(NSURL *)videoURL messageGuid:(NSString *)messageGuid attributes:(NSDictionary *)attributes completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>title</Name>
@@ -455,6 +481,9 @@
 					<Name>messageGuid</Name>
 					<Abstract type="html">An optional message GUID to use for the message.</Abstract>
 				</Parameter><Parameter>
+					<Name>attributes</Name>
+					<Abstract type="html">The attributes of the message. All values must be of types suppored by NSJSONSerialization.</Abstract>
+				</Parameter><Parameter>
 					<Name>completedBlock</Name>
 					<Abstract type="html">A block that gets called upon successfully sending the message.</Abstract>
 				</Parameter><Parameter>
@@ -463,16 +492,16 @@
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">A new message object that represents the message being sent.</Abstract></ReturnValue>
-			<Anchor>//api/name/sendMessage:messageText:recipients:videoURL:messageGuid:completeBlock:errorBlock:</Anchor>
+			<Anchor>//api/name/sendMessage:messageText:recipients:videoURL:messageGuid:attributes:completeBlock:errorBlock:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/sendMessage:messageText:recipients:videoURL:skipEncoding:completeBlock:errorBlock:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/sendMessage:messageText:recipients:videoURL:skipEncoding:attributes:completeBlock:errorBlock:</TokenIdentifier>
 			<Abstract type="html">Sends a message to recipients with the option to skip encoding the video</Abstract>
 			<DeclaredIn>ACLIPSession.h</DeclaredIn>
 			
-			<Declaration>- (ACLIPMessage *)sendMessage:(NSString *)title messageText:(NSString *)messageText recipients:(NSArray *)recipients videoURL:(NSURL *)videoURL skipEncoding:(BOOL)skipEncoding completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Declaration>- (ACLIPMessage *)sendMessage:(NSString *)title messageText:(NSString *)messageText recipients:(NSArray *)recipients videoURL:(NSURL *)videoURL skipEncoding:(BOOL)skipEncoding attributes:(NSDictionary *)attributes completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>title</Name>
@@ -490,6 +519,9 @@
 					<Name>skipEncoding</Name>
 					<Abstract type="html">BOOL to bypass Elemental encoding and encryption.</Abstract>
 				</Parameter><Parameter>
+					<Name>attributes</Name>
+					<Abstract type="html">The attributes of the message. All values must be of types suppored by NSJSONSerialization.</Abstract>
+				</Parameter><Parameter>
 					<Name>completedBlock</Name>
 					<Abstract type="html">A block that gets called upon successfully sending the message.</Abstract>
 				</Parameter><Parameter>
@@ -498,16 +530,16 @@
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">A new message object that represents the message being sent.</Abstract></ReturnValue>
-			<Anchor>//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:completeBlock:errorBlock:</Anchor>
+			<Anchor>//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:attributes:completeBlock:errorBlock:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:completeBlock:errorBlock:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPSession/sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:attributes:completeBlock:errorBlock:</TokenIdentifier>
 			<Abstract type="html">Sends a message to recipients with the option to skip encoding the video while providing your own message guid</Abstract>
 			<DeclaredIn>ACLIPSession.h</DeclaredIn>
 			
-			<Declaration>- (ACLIPMessage *)sendMessage:(NSString *)title messageText:(NSString *)messageText recipients:(NSArray *)recipients videoURL:(NSURL *)videoURL skipEncoding:(BOOL)skipEncoding messageGuid:(NSString *)messageGuid completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Declaration>- (ACLIPMessage *)sendMessage:(NSString *)title messageText:(NSString *)messageText recipients:(NSArray *)recipients videoURL:(NSURL *)videoURL skipEncoding:(BOOL)skipEncoding messageGuid:(NSString *)messageGuid attributes:(NSDictionary *)attributes completeBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>title</Name>
@@ -528,6 +560,9 @@
 					<Name>messageGuid</Name>
 					<Abstract type="html">An optional message GUID to use for the message.</Abstract>
 				</Parameter><Parameter>
+					<Name>attributes</Name>
+					<Abstract type="html">The attributes of the message. All values must be of types suppored by NSJSONSerialization.</Abstract>
+				</Parameter><Parameter>
 					<Name>completedBlock</Name>
 					<Abstract type="html">A block that gets called upon successfully sending the message.</Abstract>
 				</Parameter><Parameter>
@@ -536,7 +571,7 @@
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">A new message object that represents the message being sent.</Abstract></ReturnValue>
-			<Anchor>//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:completeBlock:errorBlock:</Anchor>
+			<Anchor>//api/name/sendMessage:messageText:recipients:videoURL:skipEncoding:messageGuid:attributes:completeBlock:errorBlock:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		

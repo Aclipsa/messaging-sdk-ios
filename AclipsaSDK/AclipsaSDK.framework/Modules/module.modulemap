@@ -1,6 +1,0 @@
-framework module AclipsaSDK {
-  umbrella header "AclipsaSDK.h"
-
-  export *
-  module * { export * }
-}
