@@ -13,8 +13,9 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '8.0'
   s.requires_arc = true
 
-  s.framework = 'AclipsaSDK'
+  s.ios.vendored_framework = 'AclipsaSDK/AclipsaSDK.framework'
+  s.preserve_path = 'AclipsaSDK/AclipsaSDK.framework'
   s.resource_bundles = {
-    'AclipsaSDK' => ['Pod/Assets/*.png']
+    'AclipsaSDK' => ['Pod/Assets/*']
   }
 end
