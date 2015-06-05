@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/ACLIPVideo.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/ACLIPVideo</TokenIdentifier>
+			<Abstract type="html">An ACLIPVideo encapulates all of the data of a video to be played.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+            
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/setGuid:</TokenIdentifier>
+			<Abstract type="html">Unique identifier for the video</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *guid</Declaration>
+			
+			
+			<Anchor>//api/name/guid</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/guid</TokenIdentifier>
+			<Abstract type="html">Unique identifier for the video</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *guid</Declaration>
+			
+			
+			<Anchor>//api/name/guid</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPVideo/guid</TokenIdentifier>
+			<Abstract type="html">Unique identifier for the video</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *guid</Declaration>
+			
+			
+			<Anchor>//api/name/guid</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/setTitle:</TokenIdentifier>
+			<Abstract type="html">The title of the video</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/title</TokenIdentifier>
+			<Abstract type="html">The title of the video</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPVideo/title</TokenIdentifier>
+			<Abstract type="html">The title of the video</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/setRunTime:</TokenIdentifier>
+			<Abstract type="html">The runtime of the video in seconds</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSTimeInterval runTime</Declaration>
+			
+			
+			<Anchor>//api/name/runTime</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/runTime</TokenIdentifier>
+			<Abstract type="html">The runtime of the video in seconds</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSTimeInterval runTime</Declaration>
+			
+			
+			<Anchor>//api/name/runTime</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPVideo/runTime</TokenIdentifier>
+			<Abstract type="html">The runtime of the video in seconds</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSTimeInterval runTime</Declaration>
+			
+			
+			<Anchor>//api/name/runTime</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/setThumbnailSmallURL:</TokenIdentifier>
+			<Abstract type="html">URL to thumbnail for the video.  Should be used in conjunction with the UIImageView addition setImageWithURL:</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSURL *thumbnailSmallURL</Declaration>
+			
+			
+			<Anchor>//api/name/thumbnailSmallURL</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/thumbnailSmallURL</TokenIdentifier>
+			<Abstract type="html">URL to thumbnail for the video.  Should be used in conjunction with the UIImageView addition setImageWithURL:</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSURL *thumbnailSmallURL</Declaration>
+			
+			
+			<Anchor>//api/name/thumbnailSmallURL</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPVideo/thumbnailSmallURL</TokenIdentifier>
+			<Abstract type="html">URL to thumbnail for the video.  Should be used in conjunction with the UIImageView addition setImageWithURL:</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSURL *thumbnailSmallURL</Declaration>
+			
+			
+			<Anchor>//api/name/thumbnailSmallURL</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/setThumbnailMediumURL:</TokenIdentifier>
+			<Abstract type="html">URL to thumbnail for the video.  Should be used in conjunction with the UIImageView addition setImageWithURL:</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSURL *thumbnailMediumURL</Declaration>
+			
+			
+			<Anchor>//api/name/thumbnailMediumURL</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/thumbnailMediumURL</TokenIdentifier>
+			<Abstract type="html">URL to thumbnail for the video.  Should be used in conjunction with the UIImageView addition setImageWithURL:</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSURL *thumbnailMediumURL</Declaration>
+			
+			
+			<Anchor>//api/name/thumbnailMediumURL</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPVideo/thumbnailMediumURL</TokenIdentifier>
+			<Abstract type="html">URL to thumbnail for the video.  Should be used in conjunction with the UIImageView addition setImageWithURL:</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSURL *thumbnailMediumURL</Declaration>
+			
+			
+			<Anchor>//api/name/thumbnailMediumURL</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/setThumbnailLargeURL:</TokenIdentifier>
+			<Abstract type="html">URL to thumbnail for the video.  Should be used in conjunction with the UIImageView addition setImageWithURL:</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSURL *thumbnailLargeURL</Declaration>
+			
+			
+			<Anchor>//api/name/thumbnailLargeURL</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/thumbnailLargeURL</TokenIdentifier>
+			<Abstract type="html">URL to thumbnail for the video.  Should be used in conjunction with the UIImageView addition setImageWithURL:</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSURL *thumbnailLargeURL</Declaration>
+			
+			
+			<Anchor>//api/name/thumbnailLargeURL</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPVideo/thumbnailLargeURL</TokenIdentifier>
+			<Abstract type="html">URL to thumbnail for the video.  Should be used in conjunction with the UIImageView addition setImageWithURL:</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSURL *thumbnailLargeURL</Declaration>
+			
+			
+			<Anchor>//api/name/thumbnailLargeURL</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/setState:</TokenIdentifier>
+			<Abstract type="html">The current state of the video.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPVideoStateType state</Declaration>
+			
+			
+			<Anchor>//api/name/state</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/state</TokenIdentifier>
+			<Abstract type="html">The current state of the video.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPVideoStateType state</Declaration>
+			
+			
+			<Anchor>//api/name/state</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPVideo/state</TokenIdentifier>
+			<Abstract type="html">The current state of the video.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPVideoStateType state</Declaration>
+			
+			
+			<Anchor>//api/name/state</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/setUploadProgress:</TokenIdentifier>
+			<Abstract type="html">The upload progress of the video between 0-1.  Value is only valide if the state is ACLIPVideoUploadingState.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) CGFloat uploadProgress</Declaration>
+			
+			
+			<Anchor>//api/name/uploadProgress</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/uploadProgress</TokenIdentifier>
+			<Abstract type="html">The upload progress of the video between 0-1.  Value is only valide if the state is ACLIPVideoUploadingState.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) CGFloat uploadProgress</Declaration>
+			
+			
+			<Anchor>//api/name/uploadProgress</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPVideo/uploadProgress</TokenIdentifier>
+			<Abstract type="html">The upload progress of the video between 0-1.  Value is only valide if the state is ACLIPVideoUploadingState.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) CGFloat uploadProgress</Declaration>
+			
+			
+			<Anchor>//api/name/uploadProgress</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/setOrientation:</TokenIdentifier>
+			<Abstract type="html">The orientation of the video.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) UIInterfaceOrientation orientation</Declaration>
+			
+			
+			<Anchor>//api/name/orientation</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/orientation</TokenIdentifier>
+			<Abstract type="html">The orientation of the video.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) UIInterfaceOrientation orientation</Declaration>
+			
+			
+			<Anchor>//api/name/orientation</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPVideo/orientation</TokenIdentifier>
+			<Abstract type="html">The orientation of the video.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) UIInterfaceOrientation orientation</Declaration>
+			
+			
+			<Anchor>//api/name/orientation</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/setAspectRatio:</TokenIdentifier>
+			<Abstract type="html">The aspectRatio of the video.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPAspectRatio aspectRatio</Declaration>
+			
+			
+			<Anchor>//api/name/aspectRatio</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/aspectRatio</TokenIdentifier>
+			<Abstract type="html">The aspectRatio of the video.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPAspectRatio aspectRatio</Declaration>
+			
+			
+			<Anchor>//api/name/aspectRatio</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPVideo/aspectRatio</TokenIdentifier>
+			<Abstract type="html">The aspectRatio of the video.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) ACLIPAspectRatio aspectRatio</Declaration>
+			
+			
+			<Anchor>//api/name/aspectRatio</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/setCreatedDate:</TokenIdentifier>
+			<Abstract type="html">The created date of the video.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSDate *createdDate</Declaration>
+			
+			
+			<Anchor>//api/name/createdDate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/createdDate</TokenIdentifier>
+			<Abstract type="html">The created date of the video.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSDate *createdDate</Declaration>
+			
+			
+			<Anchor>//api/name/createdDate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPVideo/createdDate</TokenIdentifier>
+			<Abstract type="html">The created date of the video.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSDate *createdDate</Declaration>
+			
+			
+			<Anchor>//api/name/createdDate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/setAttributes:</TokenIdentifier>
+			<Abstract type="html">The attributes of the video</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSDictionary *attributes</Declaration>
+			
+			
+			<Anchor>//api/name/attributes</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/attributes</TokenIdentifier>
+			<Abstract type="html">The attributes of the video</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSDictionary *attributes</Declaration>
+			
+			
+			<Anchor>//api/name/attributes</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ACLIPVideo/attributes</TokenIdentifier>
+			<Abstract type="html">The attributes of the video</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSDictionary *attributes</Declaration>
+			
+			
+			<Anchor>//api/name/attributes</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ACLIPVideo/maximumAllowedPixels</TokenIdentifier>
+			<Abstract type="html">Returns the maximum number of pixels allowed for the video.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>+ (NSInteger)maximumAllowedPixels</Declaration>
+			
+			<ReturnValue><Abstract type="html">The maximum number of pixels for the video&apos;s size.</Abstract></ReturnValue>
+			<Anchor>//api/name/maximumAllowedPixels</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ACLIPVideo/maximumVideoLength</TokenIdentifier>
+			<Abstract type="html">Returns the maximum length that a video may be.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>+ (NSInteger)maximumVideoLength</Declaration>
+			
+			<ReturnValue><Abstract type="html">The maximum length of the video in seconds.</Abstract></ReturnValue>
+			<Anchor>//api/name/maximumVideoLength</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ACLIPVideo/cachedVideoForGUID:</TokenIdentifier>
+			<Abstract type="html">Returns video for the guid.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>+ (ACLIPVideo *)cachedVideoForGUID:(NSString *)guid</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>guid</Name>
+					<Abstract type="html">The guid for the video to return.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The cached video for the guid.  Returns nil if the cache does not contain the video.</Abstract></ReturnValue>
+			<Anchor>//api/name/cachedVideoForGUID:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ACLIPVideo/deleteVideoCompletionBlock:errorBlock:</TokenIdentifier>
+			<Abstract type="html">Deletes the video.</Abstract>
+			<DeclaredIn>ACLIPVideo.h</DeclaredIn>
+			
+			<Declaration>- (void)deleteVideoCompletionBlock:(ACLIPNetworkCompleteBlock)completedBlock errorBlock:(ACLIPNetworkErrorBlock)errorBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>completedBlock</Name>
+					<Abstract type="html">A block that gets called upon successfully deleting the video.  completedBlock can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>errorBlock</Name>
+					<Abstract type="html">A block that gets called when any error occurs.  The error can be either a Foundation network error or an ACLIPNetworkReturnType error. errorBlock can be nil in no error handling is requiried.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/deleteVideoCompletionBlock:errorBlock:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

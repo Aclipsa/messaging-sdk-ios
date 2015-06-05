@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/kjmacaul/Library/Developer/Shared/Documentation/DocSets/com.aclipsa.AclipsaSDK.docset
+Time: 2015-06-02 18:07:02 +0000

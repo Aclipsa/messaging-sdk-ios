@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/ACLIPMoviePlayerController.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/ACLIPMoviePlayerController</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ACLIPMoviePlayerController.h</DeclaredIn>
+            
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ACLIPMoviePlayerController/moviePlayerControllerForVideo:</TokenIdentifier>
+			<Abstract type="html">Initialize an ACLIPMoviePlayerController for the video</Abstract>
+			<DeclaredIn>ACLIPMoviePlayerController.h</DeclaredIn>
+			
+			<Declaration>+ (ACLIPMoviePlayerController *)moviePlayerControllerForVideo:(ACLIPVideo *)video</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>video</Name>
+					<Abstract type="html">The ACLIPVideo that is to be loaded into the media player for playback.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A movie player controller configured for the video.</Abstract></ReturnValue>
+			<Anchor>//api/name/moviePlayerControllerForVideo:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ACLIPMoviePlayerController/moviePlayerControllerForMessage:</TokenIdentifier>
+			<Abstract type="html">Initialize an ACLIPMoviePlayerController for the message (supports screenshot reporting)</Abstract>
+			<DeclaredIn>ACLIPMoviePlayerController.h</DeclaredIn>
+			
+			<Declaration>+ (ACLIPMoviePlayerController *)moviePlayerControllerForMessage:(ACLIPMessage *)message</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>message</Name>
+					<Abstract type="html">The ACLIPMessage containing the video that is to be loaded into the media player for playback.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A movie player controller configured for the video. Returns nil if screenshot reporting is enabled but camera roll access is denied</Abstract></ReturnValue>
+			<Anchor>//api/name/moviePlayerControllerForMessage:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>
