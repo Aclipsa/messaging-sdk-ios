@@ -52,6 +52,16 @@ The iOS and Android SDKs are easily integrated into new and existing apps, and p
 
 All network communications throughout the system are protected by 128-bit AES SSL, and all data is protected with 256-bit AES encryption. Encrypted videos are streamed with Apple’s HTTP Live Streaming (HLS) protocol, as used for secure movie streaming by film studios, with optional 256-bit AES data encryption for additional security. HLS ensures that videos can be successfully played in a variety of network conditions (whether over a high-speed Wi-Fi connection or a poor-quality 3G cellular signal), and that only small, encrypted portions of a video are on the mobile device at any given time, ensuring that the video file is never actually present on the mobile device. Video and data are always stored on all servers in the system using 256-bit AES encryption.
 
+# Installation
+
+Clone this repository and simply import the framework into your project.
+
+You can also add it using [CocoaPods](https://cocoapods.org/pods/AclipsaSDK), a dependency manager for Cocoa and CocoaTouch projects. Simply add the following line to your Podfile:
+
+`pod 'AclipsaSDK'`
+
 # Learn More
 
 Learn more and get an API key at developer.aclipsa.com [developer.aclipsa.com](http://developer.aclipsa.com/).
+
+Also available via CocoaPods: 
