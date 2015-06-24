@@ -82,26 +82,30 @@
 
 <p>A few steps need to be taken in order to get your project to build correctly with the Aclipsa SDK.  First you need to add the -ObjC flag to Other Linker Flags.  This allows the SDK to correctly link with your project.</p>
 
-<p><img src="./linkerFlags.png" height="228" width="868" alt="Linker_Flags" /></p>
+<p><img src="./linkerFlags.png" height="312" width="900" alt="Linker_Flags" /></p>
 
 <p>Next you need to link a few of the system frameworks and libraries to your project.  These enable various features like video playback to work.  The required frameworks and libraries are:</p>
 
 <ul>
-<li>libz.dylib</li>
 <li>AssestsLibrary.framework</li>
-<li>AVFoundation.framework</li>
+<li>MediaPlayer.framework</li>
+<li>MobileCoreServices.framework</li>
+<li>SystemConfiguration.framework</li>
+<li>libz.dylib</li>
 <li>CoreData.framework</li>
+<li>CoreMedia.framework</li>
 <li>CoreImage.framework</li>
 <li>CoreLocation.framework</li>
-<li>CoreMedia.framework</li>
-<li>MediaPlayer.framework</li>
-<li>SystemConfiguration.framework</li>
+<li>AVFoundation.framework</li>
+<li>UIKit.framework</li>
+<li>Foundation.framework</li>
+<li>CoreGraphics.framework</li>
 </ul>
 
 
 <p>In the project editor, select your Target and highlight the Build Phases tab.  Expand “Link Binary With Libraries.” Click the + button and add the required libraries.</p>
 
-<p><img src="./linkedLibraries.png" height="433" width="705" alt="Required_Libraries" /></p>
+<p><img src="./linkedLibraries.png" height="679" width="779" alt="Required_Libraries" /></p>
 
 <p>You also need to add the Aclipsa SDK framework and resources bundle along with the AWS Mobile Framework for iOS v2 to your project. The simplest way to add them is to simply drag and drop them into your project&rsquo;s file list.  You can also add them through the Add File menu items if you prefer.  The following provided files need to be added:</p>
 
@@ -114,7 +118,9 @@
 
 <p>The AWS framework can be downloaded from <a href="http://aws.amazon.com/mobile/sdk/">http://aws.amazon.com/mobile/sdk/</a></p>
 
-<p>At this point your project is set-up to use the Aclipsa SDK.  You should start off you&rsquo;re use by creating an <a href="../../Classes/ACLIPSession.html">ACLIPSession</a> in your - (BOOL)application:(UIApplication <em>)application didFinishLaunchingWithOptions:(NSDictionary </em>)launchOptions method with:</p>
+<h3>Getting an ACLIPSession</h3>
+
+<p>At this point your project is set-up to use the Aclipsa SDK.  You should start off your use by creating an <a href="../../Classes/ACLIPSession.html">ACLIPSession</a> in your - (BOOL)application:(UIApplication <em>)application didFinishLaunchingWithOptions:(NSDictionary </em>)launchOptions method with:</p>
 
 <pre><swiftcode>ACLIPSession.createSessionWithAppID("Your App ID", serverEnvironment: ACLIPDevelopmentServer)
 </swiftcode></pre>
@@ -129,6 +135,195 @@
 </code></pre>
 
 <p>to access the session.</p>
+
+<h3>Logging Into The SDK</h3>
+
+<p>Log in to the SDK to view/send videos and messages.</p>
+
+<pre><swiftcode>
+ACLIPSession.activeSession().loginWithUserID("UserID", completionBlock: { (results: AnyObject!) in
+	// Login successful
+},
+errorBlock: {(error: NSError!) in
+	// Error logging in
+})
+</swiftcode></pre>
+<pre><code>
+[[ACLIPSession activeSession] loginWithUserID:@"UserID" completionBlock:^(id results)
+{
+	 // Login successful
+}
+errorBlock:^(NSError *error)
+{
+	 // Error logging in
+}];
+</code></pre>
+
+<h3>Sending A Message</h3>
+
+<p>Send a message to recipients with an optional title, description, and attributes.</p>
+
+<pre><swiftcode>
+ACLIPSession.activeSession().sendMessage("Video Title", messageText: "Message Text", recipients: ["someone@example.com", "example@example.com"], videoURL: self.videoURL, skipEncoding: false, attributes: [:], completeBlock: { (results: AnyObject!) in
+	// Message sent successfully
+},
+errorBlock: { (error: NSError!) in
+	// Error when sending message
+})
+</swiftcode></pre>
+<pre><code>
+[[ACLIPSession activeSession] sendMessage:@"Video Title" messageText:@"Message Text" recipients:@[@"someone@example.com", @"example@example.com"] videoURL:[self videoURL] skipEncoding:NO, attributes: @{}, completeBlock:^(id results)
+{
+	// Message sent successfully
+}
+errorBlock:^(NSError *error)
+{
+	// Error when sending message
+}];
+</code></pre>
+
+<h3>Uploading A Video</h3>
+	
+<p>Upload a video. By default, these videos can be viewed by any user.</p>
+
+<pre><swiftcode>
+ACLIPSession.activeSession().uploadVideoAtURL(NSURL.fileURLWithPath("Path to video"), title: "Video Title", attributes: [:], skipEncoding: false, completeBlock: { (results: AnyObject!) in
+	// Video upload successful
+},
+errorBlock:
+{ (error: NSError!) in
+	// Video upload error
+})
+</swiftcode></pre>
+<pre><code>
+[[ACLIPSession activeSession] uploadVideoAtURL:[NSURL fileURLWithPath:@"Path to video"] title:@"Video Title" attributes:@{} skipEncoding:NO completeBlock:^(id results)
+{
+	// Video upload successful
+}
+errorBlock:^(NSError *error)
+{
+	// Video upload error
+}];
+</code></pre>
+
+<h3>Loading Messages</h3>
+
+<p>Register with the SDK for message polling. SDK checks for messages every 30 seconds</p>
+
+<pre><swiftcode>
+ACLIPSession.activeSession().registerMessageLoadingCompletionBlock({ (messages: [AnyObject]!, threads: [AnyObject]!) in
+	var sortDescriptor: NSSortDescriptor = NSSortDescriptor(key: "lastMessage.createdDate", ascending: false)
+	
+	self.messageThreads = ((threads as NSArray).sortedArrayUsingDescriptors([sortDescriptor]) as? [ACLIPMessageThread])!
+	self.tableView.reloadData()
+	
+},
+errorBlock: { (error: NSError!) in
+	NSLog("An error occured while loading messages: %@", error);
+})
+</swiftcode></pre>
+<pre><code>
+[[ACLIPSession activeSession] registerMessageLoadingCompletionBlock:^(NSArray *messages, NSArray *threads) {
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"lastMessage.createdDate" ascending:NO];
+	
+	[self setMessageThreads:[threads sortedArrayUsingDescriptors:@[sortDescriptor]]];
+	[[self tableView] reloadData];
+}
+errorBlock:^(NSError *error) {
+	NSLog(@"An error occured while loading messages: %@", error);
+}];
+</pre></code>
+
+<h3>Viewing A Video Message</h3>
+
+<p>Reload a message before trying to view it. This obtains authentication keys and ensures the message is still available to the recipient.</p>
+
+<pre><swiftcode>
+ACLIPSession.activeSession().loadMessageWithGUID(self.message?.guid, completeBlock: { (aclipMessage: AnyObject?) in
+	if aclipMessage != nil
+	{
+		if let message = aclipMessage as? ACLIPMessage
+		{
+			self.message = message
+			let controller: ACLIPMoviePlayerViewController! = ACLIPMoviePlayerViewController(forMessage: self.message)
+			self.presentMoviePlayerViewControllerAnimated(controller)
+		}
+	}
+},
+errorBlock: { (error: NSError!) in
+	// Error loading the message
+})
+</swiftcode></pre>
+<pre><code>
+[[ACLIPSession activeSession] loadMessageWithGUID:[[self message] guid] completeBlock:^(ACLIPMessage *aclipMessage)
+{
+	if (aclipMessage)
+	{
+		ACLIPMoviePlayerViewController *controller = [ACLIPMoviePlayerViewController moviePlayerViewControllerForMessage:aclipMessage];
+		[self presentMoviePlayerViewControllerAnimated:controller];
+	}
+}
+errorBlock:^(NSError *error)
+{
+	// Error loading the message
+}];
+</code></pre>
+
+<h3>Loading Videos</h3>
+
+<p>Load the videos available for a user.</p>
+
+<pre><swiftcode>
+ACLIPSession.activeSession().loadUserVideosWithCompletionBlock({(results: AnyObject?) in
+	self.videos = results as! [ACLIPVideo]
+	self.tableView.reloadData()
+},
+errorBlock: {(error: NSError!) in
+	// Error loading videos
+})
+</swiftcode></pre>
+<pre><code>
+[[ACLIPSession activeSession] loadUserVideosWithCompletionBlock:^(NSArray *results)
+{
+	[self setVideos:results];
+	[[self tableView] reloadData];
+}
+errorBlock:^(NSError *error)
+{
+	// Error loading videos
+}];
+</code></pre>
+
+<h3>Viewing A Video</h3>
+
+<p>Reload a video before trying to view it. This obtains authentication keys and ensures the message is still available to the recipient.</p>
+
+<pre><swiftcode>
+ACLIPSession.activeSession().loadUserVideoWithID(video.guid, completionBlock: { (aclipVideo: AnyObject?) in
+	if aclipVideo != nil
+	{
+		let controller: ACLIPMoviePlayerViewController = ACLIPMoviePlayerViewController(forVideo: video)
+		self.presentMoviePlayerViewControllerAnimated(controller)
+	}
+},
+errorBlock: { (error: NSError!) in
+	// Error loading video
+})
+</swiftcode></pre>
+<pre><code>
+[[ACLIPSession activeSession] loadUserVideoWithID:[video guid] completionBlock:^(ACLIPVideo *aclipVideo)
+{
+	if (aclipVideo)
+	{
+		ACLIPMoviePlayerViewController *controller = [ACLIPMoviePlayerViewController moviePlayerViewControllerForVideo:video];
+		[self presentMoviePlayerViewControllerAnimated:controller];
+	}
+}
+errorBlock:^(NSError *error)
+{
+	// Error loading the video
+}];
+</code></pre>
 
 					<footer>
 						<div class="footer-copyright">
