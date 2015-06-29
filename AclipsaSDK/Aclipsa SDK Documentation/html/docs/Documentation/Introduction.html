@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Introduction Document</title>
+	<title>Overview</title>
 
 	<link rel="stylesheet" href="../../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -38,180 +38,168 @@
 		<div id="overview-contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">Introduction Document</h1>
+					<h1 class="title">Overview</h1>
 
 					<h1>Aclipsa SDK Startup Guide</h1>
 
-<p>Welcom to the Aclipsa SDK.  The SDK allows you to integrate the Aclipsa video messaging service into your apps.</p>
+<p>Welcome to the Aclipsa SDK. This SDK allows you to easily integrate the Aclipsa service into your apps.</p>
 
-<h2>Section 1 - What is in the Aclipsa SDK</h2>
+<h2>Section 1 &mdash; What is in the Aclipsa SDK?</h2>
 
 <h3>Documentation</h3>
 
-<p>This is where we document the Aclipsa SDK classes that you can use while developing your applications.</p>
+<p><a href="../../index.html">Details of the available Aclipsa SDK classes and functionality.</a></p>
 
 <h3>Framework</h3>
 
-<p>The framework contains all of the compiled code and the header files for the classes that are included in the Aclipsa SDK.</p>
+<p>The framework contains all of the compiled code and the header files for the classes that are included in the SDK.</p>
 
-<p>The framework includes AFNetworking v2.  It does not need to be added to your project and can be used from the framework by including <AclipsaSDK/AFNetworking> or any of it&rsquo;s specific headers.</p>
+<p>It includes AFNetworking v2. Therefor it does not need to be added to your project and can be used from the framework by including <code>AclipsaSDK/AFNetworking</code> or any of it&rsquo;s specific headers.</p>
 
 <h3>Resources Bundle</h3>
 
-<p>The resources bundle contains any project assets that are needed by the SDK.</p>
+<p>The resources bundle contains the project assets needed by the SDK.</p>
 
 <h3>Sample Application</h3>
 
-<p>We&rsquo;ve included a sample application to help you get started with the SDK.  The Aclipsa SDK Demo application shows you how to use most of the features of the SDK.</p>
+<p>We&rsquo;ve included a sample application to help you get started with the SDK. It demonstrates the use most of the features of the SDK.</p>
 
-<h2>Section 2 - How do I use the Aclipsa SDK</h2>
+<h2>Section 2 &mdash; How do I use the Aclipsa SDK?</h2>
 
 <h3>Basic Architecture</h3>
 
-<p>Using the SDK centers around the <a href="../../Classes/ACLIPSession.html">ACLIPSession</a> class.  It&rsquo;s the hub for communication with the Aclipsa servers. It coordinates all of the communication and data management in the SDK.  Apps should first create a session with the createSessionWithAppID class method and then use the activeSession class method for all future access.  Only one session will ever be created per launch.  The session will then allow to perform all other SDK functions, ie login, logout, loading video list, uploading vides, etc.</p>
+<p>Use of the SDK centers around the <a href="../../Classes/ACLIPSession.html"><code>ACLIPSession</code></a> class. It&rsquo;s the hub for communication with the Aclipsa servers and coordinates all of the communication and data management in the SDK. Apps should first create a session with the <code>createSessionWithAppID</code> class method and then use the <code>activeSession</code> class method for all future access. Only one session will ever be created per launch, which performs all other SDK functions, e.g. login, logout, loading a video or message list, uploading videos, etc.</p>
 
-<p>All network communication in the Aclipsa SDK is asynchronous and uses blocks to notify the caller when a network call has completed or if an error has occurred.  All network based methods will take two blocks as parameters, one that will be called on a successful completion and one that gets called if any error occurs.  For methods that load data from the network the completion block may be called more than once.  An initial call with cached data can happen with an additional call happening once the data is refreshed.</p>
+<p>All network communication in the Aclipsa SDK is asynchronous and uses blocks to notify the caller when a network call has completed or if an error has occurred. All network-based methods will take two blocks as parameters, one that will be called on a successful completion and one that gets called if any error occurs. For methods that load data from the network the completion block may be called more than once. An initial call with cached data can occur with an additional call occuring once the data is refreshed.</p>
 
-<h2>Section 3 - Registering an App with Aclipsa</h2>
+<h2>Section 3 &mdash; Registering an App with Aclipsa</h2>
 
-<p>If you haven&rsquo;t already received an API and Shared Secret for your app, please contact support@aclipsa.com</p>
+<p>If you haven&rsquo;t already received an API Key and Shared Secret for your app, please contact <a href="mailto:support@aclipsa.com?subject=API Key Request">support@aclipsa.com</a>.</p>
 
-<h2>Section 4 - Building an App with the Aclipsa SDK</h2>
+<h2>Section 4 &mdash; Building an App with the Aclipsa SDK</h2>
 
 <h3>Xcode Project Configuration</h3>
 
-<p>A few steps need to be taken in order to get your project to build correctly with the Aclipsa SDK.  First you need to add the -ObjC flag to Other Linker Flags.  This allows the SDK to correctly link with your project.</p>
+<p>A few steps need to be taken in order to get your project to build correctly with the Aclipsa SDK. First add the <code>-ObjC</code> flag to <i>Other Linker Flags</i>. This allows the SDK to correctly link with your project.</p>
 
 <p><img src="./linkerFlags.png" height="312" width="900" alt="Linker_Flags" /></p>
 
-<p>Next you need to link a few of the system frameworks and libraries to your project.  These enable various features like video playback to work.  The required frameworks and libraries are:</p>
+<p>Next, link a few of the system frameworks and libraries to your project, if you haven't already linked them for other reasons. These enable various features like video playback to function. The required frameworks and libraries are:</p>
 
 <ul>
-<li>AssestsLibrary.framework</li>
-<li>MediaPlayer.framework</li>
-<li>MobileCoreServices.framework</li>
-<li>SystemConfiguration.framework</li>
-<li>libz.dylib</li>
-<li>CoreData.framework</li>
-<li>CoreMedia.framework</li>
-<li>CoreImage.framework</li>
-<li>CoreLocation.framework</li>
-<li>AVFoundation.framework</li>
-<li>UIKit.framework</li>
-<li>Foundation.framework</li>
-<li>CoreGraphics.framework</li>
+<li><code>AssestsLibrary.framework</code></li>
+<li><code>AVFoundation.framework</code></li>
+<li><code>CoreData.framework</code></li>
+<li><code>CoreGraphics.framework</code></li>
+<li><code>CoreImage.framework</code></li>
+<li><code>CoreLocation.framework</code></li>
+<li><code>CoreMedia.framework</code></li>
+<li><code>Foundation.framework</code></li>
+<li><code>libz.dylib</code></li>
+<li><code>MediaPlayer.framework</code></li>
+<li><code>MobileCoreServices.framework</code></li>
+<li><code>SystemConfiguration.framework</code></li>
+<li><code>UIKit.framework</code></li>
 </ul>
 
-
-<p>In the project editor, select your Target and highlight the Build Phases tab.  Expand “Link Binary With Libraries.” Click the + button and add the required libraries.</p>
+<p>In the Xcode project editor, select your <i>Target</i> and highlight the <i>Build Phases</i> tab. <i>Expand Link Binary With Libraries</i>. Click the <b><i>+</i></b> button and add the required libraries.</p>
 
 <p><img src="./linkedLibraries.png" height="679" width="779" alt="Required_Libraries" /></p>
 
-<p>You also need to add the Aclipsa SDK framework and resources bundle along with the AWS Mobile Framework for iOS v2 to your project. The simplest way to add them is to simply drag and drop them into your project&rsquo;s file list.  You can also add them through the Add File menu items if you prefer.  The following provided files need to be added:</p>
+<p>You also need to add the Aclipsa SDK framework and resources bundle, along with the <i>AWS Mobile Framework for iOS v2</i> to your project. The simplest way to add them is to simply drag and drop them into your project&rsquo;s file list. You can also add them through the <i>Add File</i> menu items if you prefer. The following provided files need to be added:</p>
 
 <ul>
-<li>AclipsaSDK.framework</li>
-<li>AclipsaSDK.bundle</li>
-<li>S3 folder which contains a 3rd party folder, AWSiOSSDKv2.framework, and a JSON folder.</li>
+<li><code>AclipsaSDK.framework</code></li>
+<li><code>AclipsaSDK.bundle</code></li>
+<li><i>S3 folder</i> which contains a 3rd party folder, <code>AWSiOSSDKv2.framework</code>, and a JSON folder.</li>
 </ul>
 
 
-<p>The AWS framework can be downloaded from <a href="http://aws.amazon.com/mobile/sdk/">http://aws.amazon.com/mobile/sdk/</a></p>
+<p>The <i>AWS framework</i> can be downloaded from <a href="http://aws.amazon.com/mobile/sdk/">http://aws.amazon.com/mobile/sdk/</a>.</p>
 
-<h3>Getting an ACLIPSession</h3>
+<h3>Getting an <code>ACLIPSession</code></h3>
 
-<p>At this point your project is set-up to use the Aclipsa SDK.  You should start off your use by creating an <a href="../../Classes/ACLIPSession.html">ACLIPSession</a> in your - (BOOL)application:(UIApplication <em>)application didFinishLaunchingWithOptions:(NSDictionary </em>)launchOptions method with:</p>
+<p>At this point your project is set-up to use the Aclipsa SDK. You should start by creating an <a href="../../Classes/ACLIPSession.html"><code>ACLIPSession</code></a> in your <i>App Delegate</i>'s <i>didFinishLaunching</i> method:</p>
+<ul>
+<li><pre><code>- (BOOL)application:(UIApplication )application</i> didFinishLaunchingWithOptions:(NSDictionary )launchOptions</code></pre></li>
+<li><pre><swiftcode>func application(application: UIApplication, didFinishLaunchingWithOptions <i>launchOptions</i>: [NSObject: AnyObject]?) -> Bool</swiftcode></pre></li>
+</ul>
+<p>Add:</p>
 
-<pre><swiftcode>ACLIPSession.createSessionWithAppID("Your App ID", serverEnvironment: ACLIPDevelopmentServer)
-</swiftcode></pre>
-<pre><code>[ACLIPSession createSessionWithAppID:@"Your App ID" serverEnvironment:ACLIPDevelopmentServer]
-</code></pre>
+<pre><swiftcode>ACLIPSession.createSessionWithAppID("Your App ID", serverEnvironment: ACLIPDevelopmentServer)</swiftcode></pre>
+<pre><code>[ACLIPSession createSessionWithAppID:@"Your App ID" serverEnvironment:ACLIPDevelopmentServer]</code></pre>
 
-<p>All future access and calls to the session should then use</p>
+<p>All future access and calls to the session should then use:</p>
 
-<pre><swiftcode>ACLIPSession.activeSession()
-</swiftcode></pre>
-<pre><code>[ACLIPSession activeSession]
-</code></pre>
+<pre><swiftcode>ACLIPSession.activeSession()</swiftcode></pre>
+<pre><code>[ACLIPSession activeSession]</code></pre>
 
 <p>to access the session.</p>
 
-<h3>Logging Into The SDK</h3>
+<h3>Logging into the SDK</h3>
 
-<p>Log in to the SDK to view/send videos and messages.</p>
+<p>Log in to the SDK to view and send videos and messages:</p>
 
-<pre><swiftcode>
-ACLIPSession.activeSession().loginWithUserID("UserID", completionBlock: { (results: AnyObject!) in
+<pre><swiftcode>ACLIPSession.activeSession().loginWithUserID("UserID", completionBlock: { (results: AnyObject!) in
 	// Login successful
 },
 errorBlock: {(error: NSError!) in
-	// Error logging in
-})
-</swiftcode></pre>
-<pre><code>
-[[ACLIPSession activeSession] loginWithUserID:@"UserID" completionBlock:^(id results)
+	// Error logging
+})</swiftcode></pre>
+
+<pre><code>[[ACLIPSession activeSession] loginWithUserID:@"UserID" completionBlock:^(id results)
 {
 	 // Login successful
 }
 errorBlock:^(NSError *error)
 {
-	 // Error logging in
-}];
-</code></pre>
+	 // Error logging
+}];</code></pre>
 
-<h3>Sending A Message</h3>
+<h3>Sending a Message</h3>
 
-<p>Send a message to recipients with an optional title, description, and attributes.</p>
+<p>Send a message to recipients with an optional title, description, and attributes:</p>
 
-<pre><swiftcode>
-ACLIPSession.activeSession().sendMessage("Video Title", messageText: "Message Text", recipients: ["someone@example.com", "example@example.com"], videoURL: self.videoURL, skipEncoding: false, attributes: [:], completeBlock: { (results: AnyObject!) in
+<pre><swiftcode>ACLIPSession.activeSession().sendMessage("Video Title", messageText: "Message Text", recipients: ["someone@example.com", "example@example.com"], videoURL: self.videoURL, skipEncoding: false, attributes: [:], completeBlock: { (results: AnyObject!) in
 	// Message sent successfully
 },
 errorBlock: { (error: NSError!) in
 	// Error when sending message
-})
-</swiftcode></pre>
-<pre><code>
-[[ACLIPSession activeSession] sendMessage:@"Video Title" messageText:@"Message Text" recipients:@[@"someone@example.com", @"example@example.com"] videoURL:[self videoURL] skipEncoding:NO, attributes: @{}, completeBlock:^(id results)
+})</swiftcode></pre>
+<pre><code>[[ACLIPSession activeSession] sendMessage:@"Video Title" messageText:@"Message Text" recipients:@[@"someone@example.com", @"example@example.com"] videoURL:[self videoURL] skipEncoding:NO, attributes: @{}, completeBlock:^(id results)
 {
 	// Message sent successfully
 }
 errorBlock:^(NSError *error)
 {
 	// Error when sending message
-}];
-</code></pre>
+}];</code></pre>
 
 <h3>Uploading A Video</h3>
 	
 <p>Upload a video. By default, these videos can be viewed by any user.</p>
 
-<pre><swiftcode>
-ACLIPSession.activeSession().uploadVideoAtURL(NSURL.fileURLWithPath("Path to video"), title: "Video Title", attributes: [:], skipEncoding: false, completeBlock: { (results: AnyObject!) in
+<pre><swiftcode>ACLIPSession.activeSession().uploadVideoAtURL(NSURL.fileURLWithPath("Path to video"), title: "Video Title", attributes: [:], skipEncoding: false, completeBlock: { (results: AnyObject!) in
 	// Video upload successful
 },
 errorBlock:
 { (error: NSError!) in
 	// Video upload error
-})
-</swiftcode></pre>
-<pre><code>
-[[ACLIPSession activeSession] uploadVideoAtURL:[NSURL fileURLWithPath:@"Path to video"] title:@"Video Title" attributes:@{} skipEncoding:NO completeBlock:^(id results)
+})</swiftcode></pre>
+<pre><code>[[ACLIPSession activeSession] uploadVideoAtURL:[NSURL fileURLWithPath:@"Path to video"] title:@"Video Title" attributes:@{} skipEncoding:NO completeBlock:^(id results)
 {
 	// Video upload successful
 }
 errorBlock:^(NSError *error)
 {
 	// Video upload error
-}];
-</code></pre>
+}];</code></pre>
 
 <h3>Loading Messages</h3>
 
 <p>Register with the SDK for message polling. SDK checks for messages every 30 seconds</p>
 
-<pre><swiftcode>
-ACLIPSession.activeSession().registerMessageLoadingCompletionBlock({ (messages: [AnyObject]!, threads: [AnyObject]!) in
+<pre><swiftcode>ACLIPSession.activeSession().registerMessageLoadingCompletionBlock({ (messages: [AnyObject]!, threads: [AnyObject]!) in
 	var sortDescriptor: NSSortDescriptor = NSSortDescriptor(key: "lastMessage.createdDate", ascending: false)
 	
 	self.messageThreads = ((threads as NSArray).sortedArrayUsingDescriptors([sortDescriptor]) as? [ACLIPMessageThread])!
@@ -220,10 +208,8 @@ ACLIPSession.activeSession().registerMessageLoadingCompletionBlock({ (messages: 
 },
 errorBlock: { (error: NSError!) in
 	NSLog("An error occured while loading messages: %@", error);
-})
-</swiftcode></pre>
-<pre><code>
-[[ACLIPSession activeSession] registerMessageLoadingCompletionBlock:^(NSArray *messages, NSArray *threads) {
+})</swiftcode></pre>
+<pre><code>[[ACLIPSession activeSession] registerMessageLoadingCompletionBlock:^(NSArray *messages, NSArray *threads) {
 	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"lastMessage.createdDate" ascending:NO];
 	
 	[self setMessageThreads:[threads sortedArrayUsingDescriptors:@[sortDescriptor]]];
@@ -231,15 +217,13 @@ errorBlock: { (error: NSError!) in
 }
 errorBlock:^(NSError *error) {
 	NSLog(@"An error occured while loading messages: %@", error);
-}];
-</pre></code>
+}];</pre></code>
 
 <h3>Viewing A Video Message</h3>
 
 <p>Reload a message before trying to view it. This obtains authentication keys and ensures the message is still available to the recipient.</p>
 
-<pre><swiftcode>
-ACLIPSession.activeSession().loadMessageWithGUID(self.message?.guid, completeBlock: { (aclipMessage: AnyObject?) in
+<pre><swiftcode>ACLIPSession.activeSession().loadMessageWithGUID(self.message?.guid, completeBlock: { (aclipMessage: AnyObject?) in
 	if aclipMessage != nil
 	{
 		if let message = aclipMessage as? ACLIPMessage
@@ -252,10 +236,8 @@ ACLIPSession.activeSession().loadMessageWithGUID(self.message?.guid, completeBlo
 },
 errorBlock: { (error: NSError!) in
 	// Error loading the message
-})
-</swiftcode></pre>
-<pre><code>
-[[ACLIPSession activeSession] loadMessageWithGUID:[[self message] guid] completeBlock:^(ACLIPMessage *aclipMessage)
+})</swiftcode></pre>
+<pre><code>[[ACLIPSession activeSession] loadMessageWithGUID:[[self message] guid] completeBlock:^(ACLIPMessage *aclipMessage)
 {
 	if (aclipMessage)
 	{
@@ -266,24 +248,20 @@ errorBlock: { (error: NSError!) in
 errorBlock:^(NSError *error)
 {
 	// Error loading the message
-}];
-</code></pre>
+}];</code></pre>
 
 <h3>Loading Videos</h3>
 
 <p>Load the videos available for a user.</p>
 
-<pre><swiftcode>
-ACLIPSession.activeSession().loadUserVideosWithCompletionBlock({(results: AnyObject?) in
+<pre><swiftcode>ACLIPSession.activeSession().loadUserVideosWithCompletionBlock({(results: AnyObject?) in
 	self.videos = results as! [ACLIPVideo]
 	self.tableView.reloadData()
 },
 errorBlock: {(error: NSError!) in
 	// Error loading videos
-})
-</swiftcode></pre>
-<pre><code>
-[[ACLIPSession activeSession] loadUserVideosWithCompletionBlock:^(NSArray *results)
+})</swiftcode></pre>
+<pre><code>[[ACLIPSession activeSession] loadUserVideosWithCompletionBlock:^(NSArray *results)
 {
 	[self setVideos:results];
 	[[self tableView] reloadData];
@@ -291,15 +269,13 @@ errorBlock: {(error: NSError!) in
 errorBlock:^(NSError *error)
 {
 	// Error loading videos
-}];
-</code></pre>
+}];</code></pre>
 
 <h3>Viewing A Video</h3>
 
-<p>Reload a video before trying to view it. This obtains authentication keys and ensures the message is still available to the recipient.</p>
+<p>Reload a video before trying to view it. This obtains authentication keys and ensures the video is still available to the recipient.</p>
 
-<pre><swiftcode>
-ACLIPSession.activeSession().loadUserVideoWithID(video.guid, completionBlock: { (aclipVideo: AnyObject?) in
+<pre><swiftcode>ACLIPSession.activeSession().loadUserVideoWithID(video.guid, completionBlock: { (aclipVideo: AnyObject?) in
 	if aclipVideo != nil
 	{
 		let controller: ACLIPMoviePlayerViewController = ACLIPMoviePlayerViewController(forVideo: video)
@@ -308,10 +284,8 @@ ACLIPSession.activeSession().loadUserVideoWithID(video.guid, completionBlock: { 
 },
 errorBlock: { (error: NSError!) in
 	// Error loading video
-})
-</swiftcode></pre>
-<pre><code>
-[[ACLIPSession activeSession] loadUserVideoWithID:[video guid] completionBlock:^(ACLIPVideo *aclipVideo)
+})</swiftcode></pre>
+<pre><code>[[ACLIPSession activeSession] loadUserVideoWithID:[video guid] completionBlock:^(ACLIPVideo *aclipVideo)
 {
 	if (aclipVideo)
 	{
@@ -322,13 +296,12 @@ errorBlock: { (error: NSError!) in
 errorBlock:^(NSError *error)
 {
 	// Error loading the video
-}];
-</code></pre>
+}];</code></pre>
 
 					<footer>
 						<div class="footer-copyright">
 							
-							<p class="copyright">Copyright &copy; 2015 Aclipsa. All rights reserved. Updated: 2015-05-22</p>
+							<p class="copyright">Copyright &copy; 2015 Aclipsa. All rights reserved. Updated: 2015-06-29</p>
 							
 							
 							<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
