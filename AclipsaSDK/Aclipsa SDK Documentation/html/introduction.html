@@ -5,7 +5,7 @@
 
 	<title>Overview</title>
 
-	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="./css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
 	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
 </head>
@@ -14,11 +14,11 @@
 		<div class="container" class="hide-in-xcode">
 			
 			<h1 id="library-title">
-				<a href="../../index.html">AclipsaSDK </a>
+				<a href="./index.html">AclipsaSDK </a>
 			</h1>
 
 			<p id="developer-home">
-				<a href="../../index.html">Aclipsa</a>
+				<a href="./index.html">Aclipsa</a>
 			</p>
 			
 		</div>
@@ -28,7 +28,7 @@
 		<div class="container">
 			<nav>
 				<ul id="header-buttons" role="toolbar">
-					<li><a href="../../index.html">Home</a></li>
+					<li><a href="./index.html">Home</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -48,7 +48,7 @@
 
 <h3>Documentation</h3>
 
-<p><a href="../../index.html">Details of the available Aclipsa SDK classes and functionality.</a></p>
+<p><a href="./index.html">Details of the available Aclipsa SDK classes and functionality.</a></p>
 
 <h3>Framework</h3>
 
@@ -68,7 +68,7 @@
 
 <h3>Basic Architecture</h3>
 
-<p>Use of the SDK centers around the <a href="../../Classes/ACLIPSession.html"><code>ACLIPSession</code></a> class. It&rsquo;s the hub for communication with the Aclipsa servers and coordinates all of the communication and data management in the SDK. Apps should first create a session with the <code>createSessionWithAppID</code> class method and then use the <code>activeSession</code> class method for all future access. Only one session will ever be created per launch, which performs all other SDK functions, e.g. login, logout, loading a video or message list, uploading videos, etc.</p>
+<p>Use of the SDK centers around the <a href="./Classes/ACLIPSession.html"><code>ACLIPSession</code></a> class. It&rsquo;s the hub for communication with the Aclipsa servers and coordinates all of the communication and data management in the SDK. Apps should first create a session with the <code>createSessionWithAppID</code> class method and then use the <code>activeSession</code> class method for all future access. Only one session will ever be created per launch, which performs all other SDK functions, e.g. login, logout, loading a video or message list, uploading videos, etc.</p>
 
 <p>All network communication in the Aclipsa SDK is asynchronous and uses blocks to notify the caller when a network call has completed or if an error has occurred. All network-based methods will take two blocks as parameters, one that will be called on a successful completion and one that gets called if any error occurs. For methods that load data from the network the completion block may be called more than once. An initial call with cached data can occur with an additional call occuring once the data is refreshed.</p>
 
@@ -119,7 +119,7 @@
 
 <h3>Getting an <code>ACLIPSession</code></h3>
 
-<p>At this point your project is set-up to use the Aclipsa SDK. You should start by creating an <a href="../../Classes/ACLIPSession.html"><code>ACLIPSession</code></a> in your <i>App Delegate</i>'s <i>didFinishLaunching</i> method:</p>
+<p>At this point your project is set-up to use the Aclipsa SDK. You should start by creating an <a href="./Classes/ACLIPSession.html"><code>ACLIPSession</code></a> in your <i>App Delegate</i>'s <i>didFinishLaunching</i> method:</p>
 <ul>
 <li><pre><code>- (BOOL)application:(UIApplication )application</i> didFinishLaunchingWithOptions:(NSDictionary )launchOptions</code></pre></li>
 <li><pre><swiftcode>func application(application: UIApplication, didFinishLaunchingWithOptions <i>launchOptions</i>: [NSObject: AnyObject]?) -> Bool</swiftcode></pre></li>
@@ -313,6 +313,6 @@ errorBlock:^(NSError *error)
 		</div>
 	</article>
 
-	<script src="../../js/script.js"></script>
+	<script src="./js/script.js"></script>
 </body>
 </html>
