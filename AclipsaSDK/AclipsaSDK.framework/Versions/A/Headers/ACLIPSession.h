@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger, ACLIPServerEnvironment)
 
 @class ACLIPVideo, ACLIPMessage;
 
-/** An ACLIPSession encapsulates the communication session between the client application and the Aclipsa server.  A session MUST be created before any other calls to the AclipsaSDK can occur.  n ACLIPInvalidSessionExecption will be thrown if a session has not been created. */
+/** An ACLIPSession encapsulates the communication session between the client application and the Aclipsa server.  A session MUST be created before any other calls to the AclipsaSDK can occur. An ACLIPInvalidSessionExecption will be thrown if a session has not been created. */
 
 @interface ACLIPSession : NSObject
 
@@ -42,6 +42,18 @@ typedef NS_ENUM(NSInteger, ACLIPServerEnvironment)
  @return An active ACLIPSession for the appID.
  */
 + (ACLIPSession *)createSessionWithAppID:(NSString *)appID serverEnvironment:(ACLIPServerEnvironment)serverType;
+
+
+/** An appication may get or set the current active session.
+ 
+ Only one ACLIPSession can be created.  Calling createSessionWithAppID: more than once will result in the same object being returned that is initialized to the appID used in the first call to it.
+ 
+ @param appID The id string for the app provided by the AclipsaSDK admin site.
+ @param serverType An ACLIPServerEnvironment value for which server environment should be used.
+ @param hostName The host name that will be used for all server API communication.
+ @return An active ACLIPSession for the appID.
+ */
++ (ACLIPSession *)createSessionWithAppID:(NSString *)appID serverEnvironment:(ACLIPServerEnvironment)serverType hostName:(NSString *)hostName;
 
 /** An appication may get or set the current active session.
 

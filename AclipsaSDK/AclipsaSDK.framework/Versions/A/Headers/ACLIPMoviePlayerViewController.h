@@ -31,9 +31,10 @@ typedef BOOL(^ACLIPAssetsLoadErrorBlock)(NSError *);
  
  @param video The ACLIPVideo that is to be loaded into the media player for playback.
  @param withAutoScaling BOOL indicating whether or not the video should be automatically scaled by the player
+ @param orientationMask NSInteger indicating the possible orientations of the player
  @return A movie player controller configured for the video.
  */
-+ (ACLIPMoviePlayerViewController*)moviePlayerViewControllerForVideo:(ACLIPVideo*)video withAutoScaling:(BOOL)withAutoScaling;
++ (ACLIPMoviePlayerViewController*)moviePlayerViewControllerForVideo:(ACLIPVideo*)video withAutoScaling:(BOOL)withAutoScaling orientationMask:(NSInteger)orientationMask;
 
 /** Initialize an ACLIPMoviePlayerViewController for the message (supports screenshot reporting)
  
@@ -47,8 +48,9 @@ typedef BOOL(^ACLIPAssetsLoadErrorBlock)(NSError *);
  
  @param message The ACLIPMessage containing the video that is to be loaded into the media player for playback.
  @param withAutoScaling BOOL indicating whether or not the video should be automatically scaled by the player
+ @param orientationMask NSInteger indicating the possible orientations of the player
  @return A movie player controller configured for the video. Returns nil if screenshot reporting is enabled but camera roll access is denied
  */
-+ (ACLIPMoviePlayerViewController*)moviePlayerViewControllerForMessage:(ACLIPMessage*)message withAutoScaling:(BOOL)withAutoScaling;
++ (ACLIPMoviePlayerViewController*)moviePlayerViewControllerForMessage:(ACLIPMessage*)message withAutoScaling:(BOOL)withAutoScaling orientationMask:(NSInteger)orientationMask;
 
 @end

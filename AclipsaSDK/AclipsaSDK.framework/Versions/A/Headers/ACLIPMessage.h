@@ -22,7 +22,7 @@
 /** The title of the message */
 @property (nonatomic, readonly) NSString *title;
 
-/** The messageText of the message */
+/** The descriptive text associated with this message */
 @property (nonatomic, readonly) NSString *messageText;
 
 /** The user who sent the message */

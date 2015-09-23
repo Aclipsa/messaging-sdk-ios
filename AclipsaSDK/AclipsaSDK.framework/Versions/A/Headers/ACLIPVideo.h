@@ -29,13 +29,13 @@
 /** The current state of the video. */
 @property (nonatomic, readonly) ACLIPVideoStateType state;
 
-/** The upload progress of the video between 0-1.  Value is only valide if the state is ACLIPVideoUploadingState. */
+/** The upload progress of the video between 0-1.  Value is only valid if the state is ACLIPVideoUploadingState. */
 @property (nonatomic, readonly) CGFloat uploadProgress;
 
 /** The orientation of the video. */
 @property (nonatomic, readonly) UIInterfaceOrientation orientation;
 
-/** The aspectRatio of the video. */
+/** The aspect ratio of the video */
 @property (nonatomic, readonly) ACLIPAspectRatio aspectRatio;
 
 /** The created date of the video. */
@@ -57,6 +57,11 @@
  
  @return The maximum length of the video in seconds. */
 + (NSInteger)maximumVideoLength;
+
+/** Returns the amount of time the video should be rolled back before beginning playback.
+ 
+ @return The amount of time the video should be rolled back in seconds. */
++ (NSInteger)resumeFactor;
 
 /** Returns video for the guid.
  
