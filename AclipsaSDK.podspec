@@ -15,7 +15,5 @@ Pod::Spec.new do |s|
 
   s.ios.vendored_framework = 'AclipsaSDK/AclipsaSDK.framework'
   s.preserve_path = 'AclipsaSDK/AclipsaSDK.framework'
-  s.resource_bundles = {
-    'AclipsaSDK' => ['AclipsaSDK/AclipsaSDK.bundle', 'AclipsaSDK/Aclipsa SDK Documentation', 'AclipsaSDKDemo.zip', 'SwiftAclipsaSDKDemo.zip']
-  }
+  s.resources = ['AclipsaSDK/AclipsaSDK.bundle', 'AclipsaSDK/Aclipsa SDK Documentation', 'AclipsaSDKDemo.zip', 'SwiftAclipsaSDKDemo.zip']
 end
