@@ -95,7 +95,8 @@
 <li><code>CoreLocation.framework</code></li>
 <li><code>CoreMedia.framework</code></li>
 <li><code>Foundation.framework</code></li>
-<li><code>libz.dylib</code></li>
+<li><code>libz.tbd</code></li>
+<li><code>libsqlite3.tbd</code></li>
 <li><code>MediaPlayer.framework</code></li>
 <li><code>MobileCoreServices.framework</code></li>
 <li><code>SystemConfiguration.framework</code></li>
@@ -104,26 +105,21 @@
 
 <p>In the Xcode project editor, select your <i>Target</i> and highlight the <i>Build Phases</i> tab. <i>Expand Link Binary With Libraries</i>. Click the <b><i>+</i></b> button and add the required libraries.</p>
 
-<p><img src="./linkedLibraries.png" height="679" width="779" alt="Required_Libraries" /></p>
+<p><img src="./linkedLibraries.png" height="553" width="896" alt="Required_Libraries" /></p>
 
-<p>You also need to add the Aclipsa SDK framework and resources bundle, along with the <i>AWS Mobile Framework for iOS v2</i> to your project. The simplest way to add them is to simply drag and drop them into your project&rsquo;s file list. You can also add them through the <i>Add File</i> menu items if you prefer. The following provided files need to be added:</p>
+<p>You also need to add the Aclipsa SDK framework and resources bundle to your project. The simplest way to add them is to simply drag and drop them into your project&rsquo;s file list. You can also add them through the <i>Add File</i> menu items if you prefer. The following provided files need to be added:</p>
 
 <ul>
 <li><code>AclipsaSDK.framework</code></li>
 <li><code>AclipsaSDK.bundle</code></li>
-<li><i>S3 folder</i> which contains a 3rd party folder, <code>AWSiOSSDKv2.framework</code>, and a JSON folder.</li>
 </ul>
 
-
-<p>The <i>AWS framework</i> can be downloaded from <a href="http://aws.amazon.com/mobile/sdk/">http://aws.amazon.com/mobile/sdk/</a>.</p>
 
 <h3>Getting an <code>ACLIPSession</code></h3>
 
 <p>At this point your project is set-up to use the Aclipsa SDK. You should start by creating an <a href="./Classes/ACLIPSession.html"><code>ACLIPSession</code></a> in your <i>App Delegate</i>'s <i>didFinishLaunching</i> method:</p>
-<ul>
-<li><pre><code>- (BOOL)application:(UIApplication )application</i> didFinishLaunchingWithOptions:(NSDictionary )launchOptions</code></pre></li>
-<li><pre><swiftcode>func application(application: UIApplication, didFinishLaunchingWithOptions <i>launchOptions</i>: [NSObject: AnyObject]?) -> Bool</swiftcode></pre></li>
-</ul>
+<pre><code>- (BOOL)application:(UIApplication )application</i> didFinishLaunchingWithOptions:(NSDictionary )launchOptions</code></pre>
+<pre><swiftcode>func application(application: UIApplication, didFinishLaunchingWithOptions <i>launchOptions</i>: [NSObject: AnyObject]?) -> Bool</swiftcode></pre>
 <p>Add:</p>
 
 <pre><swiftcode>ACLIPSession.createSessionWithAppID("Your App ID", serverEnvironment: ACLIPDevelopmentServer)</swiftcode></pre>
@@ -144,7 +140,7 @@
 	// Login successful
 },
 errorBlock: {(error: NSError!) in
-	// Error logging
+	// Error logging in
 })</swiftcode></pre>
 
 <pre><code>[[ACLIPSession activeSession] loginWithUserID:@"UserID" completionBlock:^(id results)
@@ -153,7 +149,7 @@ errorBlock: {(error: NSError!) in
 }
 errorBlock:^(NSError *error)
 {
-	 // Error logging
+	 // Error logging in
 }];</code></pre>
 
 <h3>Sending a Message</h3>
