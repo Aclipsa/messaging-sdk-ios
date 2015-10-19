@@ -114,6 +114,11 @@
 <li><code>AclipsaSDK.bundle</code></li>
 </ul>
 
+<h3>iOS 9 App Transport Security plist entry</h3>
+
+<p>If you compile your apps with iOS 9 SDK (or Xcode 7), Apple&rsquo;s App Transport Security (ATS) feature may affect the ability of apps to connect to certain AWS service endpoints. In order to ensure affected apps continue to successfully connect to AWS endpoints, you&rsquo;ll need to configure them to interact properly with Apple&rsquo;s ATS by adding these properties to your info.plist file:</p>
+
+<center><img src="./plistEntry.png" height="216" width="424" alt="Plist_Entry" /></center>
 
 <h3>Getting an <code>ACLIPSession</code></h3>
 
