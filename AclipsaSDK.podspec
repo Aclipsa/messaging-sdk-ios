@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "AclipsaSDK"
-  s.version          = "1.0.10"
+  s.version          = "1.0.11"
   s.summary          = "Easily Add Video and Messaging to Your Current and Future Apps."
   s.description      = <<-DESC
                        The Aclipsa Video & Messaging platform allows you to easily add video and text messaging and video content distribution to any iOS or Android app. Your users will be able to upload and watch videos as well as create and send messages to each other quickly and securely.
